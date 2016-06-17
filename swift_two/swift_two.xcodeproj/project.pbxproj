@@ -14,6 +14,48 @@
 		8E75A08B1D14510600C97654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E75A0891D14510600C97654 /* LaunchScreen.storyboard */; };
 		8E75A0961D14510600C97654 /* swift_twoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0951D14510600C97654 /* swift_twoTests.swift */; };
 		8E75A0A11D14510600C97654 /* swift_twoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0A01D14510600C97654 /* swift_twoUITests.swift */; };
+		8E75A0C11D145C9E00C97654 /* HYDiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C01D145C9E00C97654 /* HYDiscoverVC.swift */; };
+		8E75A0C21D145C9E00C97654 /* HYDiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C01D145C9E00C97654 /* HYDiscoverVC.swift */; };
+		8E75A0C31D145C9E00C97654 /* HYDiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C01D145C9E00C97654 /* HYDiscoverVC.swift */; };
+		8E75A0C51D145CAF00C97654 /* HYAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C41D145CAF00C97654 /* HYAccountTool.swift */; };
+		8E75A0C61D145CAF00C97654 /* HYAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C41D145CAF00C97654 /* HYAccountTool.swift */; };
+		8E75A0C71D145CAF00C97654 /* HYAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C41D145CAF00C97654 /* HYAccountTool.swift */; };
+		8E75A0C91D145CBB00C97654 /* HYHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C81D145CBB00C97654 /* HYHomeVC.swift */; };
+		8E75A0CA1D145CBB00C97654 /* HYHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C81D145CBB00C97654 /* HYHomeVC.swift */; };
+		8E75A0CB1D145CBB00C97654 /* HYHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0C81D145CBB00C97654 /* HYHomeVC.swift */; };
+		8E75A0CD1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0CC1D145CCD00C97654 /* HYTabbarViewController.swift */; };
+		8E75A0CE1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0CC1D145CCD00C97654 /* HYTabbarViewController.swift */; };
+		8E75A0CF1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0CC1D145CCD00C97654 /* HYTabbarViewController.swift */; };
+		8E75A0D11D145CD300C97654 /* HYNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D01D145CD300C97654 /* HYNavigationViewController.swift */; };
+		8E75A0D21D145CD300C97654 /* HYNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D01D145CD300C97654 /* HYNavigationViewController.swift */; };
+		8E75A0D31D145CD300C97654 /* HYNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D01D145CD300C97654 /* HYNavigationViewController.swift */; };
+		8E75A0D51D145CE000C97654 /* HYTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D41D145CE000C97654 /* HYTabBar.swift */; };
+		8E75A0D61D145CE000C97654 /* HYTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D41D145CE000C97654 /* HYTabBar.swift */; };
+		8E75A0D71D145CE000C97654 /* HYTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D41D145CE000C97654 /* HYTabBar.swift */; };
+		8E75A0D91D145CEE00C97654 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D81D145CEE00C97654 /* Global.swift */; };
+		8E75A0DA1D145CEE00C97654 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D81D145CEE00C97654 /* Global.swift */; };
+		8E75A0DB1D145CEE00C97654 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0D81D145CEE00C97654 /* Global.swift */; };
+		8E75A0DD1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0DC1D145CFC00C97654 /* HYBaseTableViewController.swift */; };
+		8E75A0DE1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0DC1D145CFC00C97654 /* HYBaseTableViewController.swift */; };
+		8E75A0DF1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0DC1D145CFC00C97654 /* HYBaseTableViewController.swift */; };
+		8E75A0E11D145D0900C97654 /* HYVistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E01D145D0900C97654 /* HYVistorView.swift */; };
+		8E75A0E21D145D0900C97654 /* HYVistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E01D145D0900C97654 /* HYVistorView.swift */; };
+		8E75A0E31D145D0900C97654 /* HYVistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E01D145D0900C97654 /* HYVistorView.swift */; };
+		8E75A0E51D145D1100C97654 /* HYMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E41D145D1100C97654 /* HYMessageVC.swift */; };
+		8E75A0E61D145D1100C97654 /* HYMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E41D145D1100C97654 /* HYMessageVC.swift */; };
+		8E75A0E71D145D1100C97654 /* HYMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E41D145D1100C97654 /* HYMessageVC.swift */; };
+		8E75A0E91D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E81D145D1700C97654 /* HYNewFeatureViewController.swift */; };
+		8E75A0EA1D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E81D145D1700C97654 /* HYNewFeatureViewController.swift */; };
+		8E75A0EB1D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0E81D145D1700C97654 /* HYNewFeatureViewController.swift */; };
+		8E75A0ED1D145D2300C97654 /* HYOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0EC1D145D2300C97654 /* HYOAuthViewController.swift */; };
+		8E75A0EE1D145D2300C97654 /* HYOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0EC1D145D2300C97654 /* HYOAuthViewController.swift */; };
+		8E75A0EF1D145D2300C97654 /* HYOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0EC1D145D2300C97654 /* HYOAuthViewController.swift */; };
+		8E75A0F11D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F01D145D2F00C97654 /* HYAccessTokenModel.swift */; };
+		8E75A0F21D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F01D145D2F00C97654 /* HYAccessTokenModel.swift */; };
+		8E75A0F31D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F01D145D2F00C97654 /* HYAccessTokenModel.swift */; };
+		8E75A0F51D145D3500C97654 /* HYProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F41D145D3500C97654 /* HYProfileVC.swift */; };
+		8E75A0F61D145D3500C97654 /* HYProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F41D145D3500C97654 /* HYProfileVC.swift */; };
+		8E75A0F71D145D3500C97654 /* HYProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F41D145D3500C97654 /* HYProfileVC.swift */; };
 		92757E75712E54EACCD10EC8 /* Pods_swift_twoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD345D2FBE18526973B05DB /* Pods_swift_twoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +93,20 @@
 		8E75A09C1D14510600C97654 /* swift_twoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift_twoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E75A0A01D14510600C97654 /* swift_twoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_twoUITests.swift; sourceTree = "<group>"; };
 		8E75A0A21D14510600C97654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E75A0C01D145C9E00C97654 /* HYDiscoverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYDiscoverVC.swift; sourceTree = "<group>"; };
+		8E75A0C41D145CAF00C97654 /* HYAccountTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAccountTool.swift; sourceTree = "<group>"; };
+		8E75A0C81D145CBB00C97654 /* HYHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYHomeVC.swift; sourceTree = "<group>"; };
+		8E75A0CC1D145CCD00C97654 /* HYTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYTabbarViewController.swift; sourceTree = "<group>"; };
+		8E75A0D01D145CD300C97654 /* HYNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNavigationViewController.swift; sourceTree = "<group>"; };
+		8E75A0D41D145CE000C97654 /* HYTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYTabBar.swift; sourceTree = "<group>"; };
+		8E75A0D81D145CEE00C97654 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		8E75A0DC1D145CFC00C97654 /* HYBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYBaseTableViewController.swift; sourceTree = "<group>"; };
+		8E75A0E01D145D0900C97654 /* HYVistorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYVistorView.swift; sourceTree = "<group>"; };
+		8E75A0E41D145D1100C97654 /* HYMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMessageVC.swift; sourceTree = "<group>"; };
+		8E75A0E81D145D1700C97654 /* HYNewFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNewFeatureViewController.swift; sourceTree = "<group>"; };
+		8E75A0EC1D145D2300C97654 /* HYOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYOAuthViewController.swift; sourceTree = "<group>"; };
+		8E75A0F01D145D2F00C97654 /* HYAccessTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAccessTokenModel.swift; sourceTree = "<group>"; };
+		8E75A0F41D145D3500C97654 /* HYProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYProfileVC.swift; sourceTree = "<group>"; };
 		A9C09A485B8EDEC497BEC032 /* Pods-swift_twoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_twoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift_twoTests/Pods-swift_twoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B7F42554002C7550654011 /* Pods_swift_two.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_two.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AA5BB5040FF086392A37E6 /* Pods-swift_two.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_two.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift_two/Pods-swift_two.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +218,7 @@
 		8E75A0AF1D1457E800C97654 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0F01D145D2F00C97654 /* HYAccessTokenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +233,8 @@
 		8E75A0B11D1457E800C97654 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0C41D145CAF00C97654 /* HYAccountTool.swift */,
+				8E75A0D81D145CEE00C97654 /* Global.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -200,6 +259,8 @@
 		8E75A0B31D1457E800C97654 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0DC1D145CFC00C97654 /* HYBaseTableViewController.swift */,
+				8E75A0E01D145D0900C97654 /* HYVistorView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -214,6 +275,7 @@
 		8E75A0B51D1457E800C97654 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0C01D145C9E00C97654 /* HYDiscoverVC.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -221,6 +283,7 @@
 		8E75A0B61D1457E800C97654 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0C81D145CBB00C97654 /* HYHomeVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -235,6 +298,9 @@
 		8E75A0B81D1457E800C97654 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0D01D145CD300C97654 /* HYNavigationViewController.swift */,
+				8E75A0CC1D145CCD00C97654 /* HYTabbarViewController.swift */,
+				8E75A0D41D145CE000C97654 /* HYTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -242,6 +308,7 @@
 		8E75A0B91D1457E800C97654 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0E41D145D1100C97654 /* HYMessageVC.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -249,6 +316,7 @@
 		8E75A0BA1D1457E800C97654 /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0E81D145D1700C97654 /* HYNewFeatureViewController.swift */,
 			);
 			path = NewFeature;
 			sourceTree = "<group>";
@@ -256,6 +324,7 @@
 		8E75A0BB1D1457E800C97654 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0EC1D145D2300C97654 /* HYOAuthViewController.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -263,6 +332,7 @@
 		8E75A0BC1D1457E800C97654 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0F41D145D3500C97654 /* HYProfileVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -549,7 +619,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E75A0F11D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */,
+				8E75A0D91D145CEE00C97654 /* Global.swift in Sources */,
+				8E75A0C91D145CBB00C97654 /* HYHomeVC.swift in Sources */,
+				8E75A0F51D145D3500C97654 /* HYProfileVC.swift in Sources */,
+				8E75A0E91D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */,
+				8E75A0E11D145D0900C97654 /* HYVistorView.swift in Sources */,
+				8E75A0C51D145CAF00C97654 /* HYAccountTool.swift in Sources */,
+				8E75A0D11D145CD300C97654 /* HYNavigationViewController.swift in Sources */,
+				8E75A0ED1D145D2300C97654 /* HYOAuthViewController.swift in Sources */,
+				8E75A0C11D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
+				8E75A0E51D145D1100C97654 /* HYMessageVC.swift in Sources */,
+				8E75A0CD1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
 				8E75A0811D14510600C97654 /* AppDelegate.swift in Sources */,
+				8E75A0D51D145CE000C97654 /* HYTabBar.swift in Sources */,
+				8E75A0DD1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +641,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E75A0F21D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */,
+				8E75A0DA1D145CEE00C97654 /* Global.swift in Sources */,
+				8E75A0CA1D145CBB00C97654 /* HYHomeVC.swift in Sources */,
+				8E75A0F61D145D3500C97654 /* HYProfileVC.swift in Sources */,
+				8E75A0EA1D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */,
+				8E75A0E21D145D0900C97654 /* HYVistorView.swift in Sources */,
+				8E75A0C61D145CAF00C97654 /* HYAccountTool.swift in Sources */,
+				8E75A0D21D145CD300C97654 /* HYNavigationViewController.swift in Sources */,
+				8E75A0EE1D145D2300C97654 /* HYOAuthViewController.swift in Sources */,
+				8E75A0C21D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
+				8E75A0E61D145D1100C97654 /* HYMessageVC.swift in Sources */,
+				8E75A0CE1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
 				8E75A0961D14510600C97654 /* swift_twoTests.swift in Sources */,
+				8E75A0D61D145CE000C97654 /* HYTabBar.swift in Sources */,
+				8E75A0DE1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +663,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E75A0F31D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */,
+				8E75A0DB1D145CEE00C97654 /* Global.swift in Sources */,
+				8E75A0CB1D145CBB00C97654 /* HYHomeVC.swift in Sources */,
+				8E75A0F71D145D3500C97654 /* HYProfileVC.swift in Sources */,
+				8E75A0EB1D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */,
+				8E75A0E31D145D0900C97654 /* HYVistorView.swift in Sources */,
+				8E75A0C71D145CAF00C97654 /* HYAccountTool.swift in Sources */,
+				8E75A0D31D145CD300C97654 /* HYNavigationViewController.swift in Sources */,
+				8E75A0EF1D145D2300C97654 /* HYOAuthViewController.swift in Sources */,
+				8E75A0C31D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
+				8E75A0E71D145D1100C97654 /* HYMessageVC.swift in Sources */,
+				8E75A0CF1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
 				8E75A0A11D14510600C97654 /* swift_twoUITests.swift in Sources */,
+				8E75A0D71D145CE000C97654 /* HYTabBar.swift in Sources */,
+				8E75A0DF1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

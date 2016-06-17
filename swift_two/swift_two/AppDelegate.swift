@@ -15,6 +15,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        //MARK: - 进行界面跳转判断，
+        let account: HYAccessTokenModel? = HYAccountTool.getAccount()
+        
+        if account == nil {
+            
+            let oauthViewController = HYNavigationViewController(rootViewController: HYOAuthViewController())
+            
+            window?.rootViewController = oauthViewController
+            
+        }else {
+            
+            window?.rootViewController = HYTabbarViewController()
+            
+        }
+        
+        //        window?.rootViewController = HYLoginViewController()
+        
+        window?.makeKeyAndVisible()
+        
         // Override point for customization after application launch.
         return true
     }
