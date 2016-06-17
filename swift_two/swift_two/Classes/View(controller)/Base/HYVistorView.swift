@@ -29,9 +29,7 @@ class HYVistorView: UIView {
    private var registerBtn: UIButton?
    private var loginBtn: UIButton?
 //    var insertBtn: UIButton?
-    
-    
-    
+  
     override init(frame: CGRect) {
         super.init(frame: frame)
         

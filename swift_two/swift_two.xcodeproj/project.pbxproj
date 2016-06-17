@@ -56,6 +56,12 @@
 		8E75A0F51D145D3500C97654 /* HYProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F41D145D3500C97654 /* HYProfileVC.swift */; };
 		8E75A0F61D145D3500C97654 /* HYProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F41D145D3500C97654 /* HYProfileVC.swift */; };
 		8E75A0F71D145D3500C97654 /* HYProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F41D145D3500C97654 /* HYProfileVC.swift */; };
+		8E75A0F91D145F6200C97654 /* HYAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F81D145F6200C97654 /* HYAccountViewModel.swift */; };
+		8E75A0FA1D145F6200C97654 /* HYAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F81D145F6200C97654 /* HYAccountViewModel.swift */; };
+		8E75A0FB1D145F6200C97654 /* HYAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0F81D145F6200C97654 /* HYAccountViewModel.swift */; };
+		8E75A0FD1D14655500C97654 /* HYLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */; };
+		8E75A0FE1D14655500C97654 /* HYLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */; };
+		8E75A0FF1D14655500C97654 /* HYLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */; };
 		92757E75712E54EACCD10EC8 /* Pods_swift_twoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD345D2FBE18526973B05DB /* Pods_swift_twoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +113,8 @@
 		8E75A0EC1D145D2300C97654 /* HYOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYOAuthViewController.swift; sourceTree = "<group>"; };
 		8E75A0F01D145D2F00C97654 /* HYAccessTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAccessTokenModel.swift; sourceTree = "<group>"; };
 		8E75A0F41D145D3500C97654 /* HYProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYProfileVC.swift; sourceTree = "<group>"; };
+		8E75A0F81D145F6200C97654 /* HYAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAccountViewModel.swift; sourceTree = "<group>"; };
+		8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLoginViewController.swift; sourceTree = "<group>"; };
 		A9C09A485B8EDEC497BEC032 /* Pods-swift_twoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_twoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift_twoTests/Pods-swift_twoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B7F42554002C7550654011 /* Pods_swift_two.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_two.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AA5BB5040FF086392A37E6 /* Pods-swift_two.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_two.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift_two/Pods-swift_two.release.xcconfig"; sourceTree = "<group>"; };
@@ -291,6 +299,7 @@
 		8E75A0B71D1457E800C97654 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -298,8 +307,8 @@
 		8E75A0B81D1457E800C97654 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8E75A0D01D145CD300C97654 /* HYNavigationViewController.swift */,
 				8E75A0CC1D145CCD00C97654 /* HYTabbarViewController.swift */,
+				8E75A0D01D145CD300C97654 /* HYNavigationViewController.swift */,
 				8E75A0D41D145CE000C97654 /* HYTabBar.swift */,
 			);
 			path = Main;
@@ -340,6 +349,7 @@
 		8E75A0BD1D1457E800C97654 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8E75A0F81D145F6200C97654 /* HYAccountViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -631,7 +641,9 @@
 				8E75A0C11D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
 				8E75A0E51D145D1100C97654 /* HYMessageVC.swift in Sources */,
 				8E75A0CD1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
+				8E75A0FD1D14655500C97654 /* HYLoginViewController.swift in Sources */,
 				8E75A0811D14510600C97654 /* AppDelegate.swift in Sources */,
+				8E75A0F91D145F6200C97654 /* HYAccountViewModel.swift in Sources */,
 				8E75A0D51D145CE000C97654 /* HYTabBar.swift in Sources */,
 				8E75A0DD1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 			);
@@ -653,7 +665,9 @@
 				8E75A0C21D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
 				8E75A0E61D145D1100C97654 /* HYMessageVC.swift in Sources */,
 				8E75A0CE1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
+				8E75A0FE1D14655500C97654 /* HYLoginViewController.swift in Sources */,
 				8E75A0961D14510600C97654 /* swift_twoTests.swift in Sources */,
+				8E75A0FA1D145F6200C97654 /* HYAccountViewModel.swift in Sources */,
 				8E75A0D61D145CE000C97654 /* HYTabBar.swift in Sources */,
 				8E75A0DE1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 			);
@@ -675,7 +689,9 @@
 				8E75A0C31D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
 				8E75A0E71D145D1100C97654 /* HYMessageVC.swift in Sources */,
 				8E75A0CF1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
+				8E75A0FF1D14655500C97654 /* HYLoginViewController.swift in Sources */,
 				8E75A0A11D14510600C97654 /* swift_twoUITests.swift in Sources */,
+				8E75A0FB1D145F6200C97654 /* HYAccountViewModel.swift in Sources */,
 				8E75A0D71D145CE000C97654 /* HYTabBar.swift in Sources */,
 				8E75A0DF1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 			);

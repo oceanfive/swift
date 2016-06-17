@@ -15,8 +15,8 @@ import SVProgressHUD
 class HYOAuthViewController: UIViewController, UIWebViewDelegate {
 
     
-    let webView = UIWebView()
-    var code: String?
+    private let webView = UIWebView()
+    private var code: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class HYOAuthViewController: UIViewController, UIWebViewDelegate {
     }
 
     //启动webView ，设置初始信息
-    func setup() {
+    private func setup() {
     
         view.addSubview(webView)
         webView.frame = view.frame
@@ -74,13 +74,12 @@ class HYOAuthViewController: UIViewController, UIWebViewDelegate {
     }
     
     //发送网络请求
-    func sendNetWork(){
+    private func sendNetWork(){
         //MARK: - 这里不需要使用第三方框架，webView自带的就可以了
         let urlString = oauthURLString + "?client_id=\(client_id)" + "&redirect_uri=\(redirect_uri)"
         let url = NSURL(string: urlString)
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
-        
     }
     
     //MARK: - UIWebViewDelegate
@@ -102,7 +101,7 @@ class HYOAuthViewController: UIViewController, UIWebViewDelegate {
             code = tempString.substringFromIndex(range.endIndex)
             
             //MARK: - 获取accessToken
-            getAccessToken()
+            HYAccountViewModel.getAccessToken(code!)
             
 //            print(range.startIndex) //http://weibo.com/u/3216382533/home?wvr=5&code=fb1813827f813cfbc49815014d443f4e
 //            print(range.endIndex)
@@ -121,7 +120,6 @@ class HYOAuthViewController: UIViewController, UIWebViewDelegate {
         http://weibo.cn/u/3216382533/home?wvr=5&code=02a19e23c67e0d74da7c46fc094b901f&jumpfrom=weibocom&wvr=5&code=02a19e23c67e0d74da7c46fc094b901f
         http://m.weibo.cn//?jumpfrom=weibocom
         https://passport.weibo.cn/signin/welcome?entry=mweibo&r=http%3A%2F%2Fm.weibo.cn%2F%2F%3Fjumpfrom%3Dweibocom&jumpfrom=weibocom
-        
         */
         
     }
@@ -140,75 +138,5 @@ class HYOAuthViewController: UIViewController, UIWebViewDelegate {
         
     }
 
-    //获取accessToken - 使用第三方框架
-    func getAccessToken(){
-    
-        let manager = AFHTTPSessionManager()
-        //MARK: - 如果AFN提示不接受文件类型，那么需要自己手动添加
-        manager.responseSerializer.acceptableContentTypes?.insert("text/plain")
-        
-        let dict = ["client_id": client_id, "client_secret": client_secret, "grant_type": grant_type, "code": code!, "redirect_uri": redirect_uri]
-        
-        manager.POST(accessTokenURLString, parameters: dict, success: { (task, response) -> Void in
-            
-//            print("task--\(task)")
-//            print("response--\(response)")
-            
-            HYAccountTool.saveAccount(response! as! [String : AnyObject])
-//
-//            let model: HYAccessTokenModel? = HYAccountTool.getAccount()
-//            
-//            if model == nil {
-//                
-//                print("值为空")
-//            
-//            }else {
-//                
-//                print("不为空")
-//    
-//            }
-//            
-//            if let model: HYAccessTokenModel = HYAccountTool.getAccount() {
-//            
-//                print(model.access_token)
-//                
-//            
-//            }
-//            
-
-            
-            
-            let keyWindow = UIApplication.sharedApplication().keyWindow
-            
-            keyWindow?.rootViewController = HYNewFeatureViewController()
-            
-            
-            
-            //MARK: - 用MJ第三方框架转模型时，如果为nil会崩溃，这时需要添加一个判断，是否为空的判断
-//            if let accessTokenModel = HYAccessTokenModel.mj_objectWithKeyValues(response){
-
-            
-//            }
-            
-//            let accessTokenModel = HYAccessTokenModel.mj_objectArrayWithKeyValuesArray(response)
-            
-            /*
-            Optional({
-            "access_token" = "2.00dBcfVDtOFu4E6c7ef71c44GliulB";
-            "expires_in" = 157679999;
-            "remind_in" = 157679999;
-            uid = 3216382533;
-            })
-
-            
-            */
-            }) { (errorTask, error) -> Void in
-                
-                print("error---\(error)")
-                
-        }
-        
-    
-    }
 
 }

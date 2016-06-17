@@ -15,18 +15,21 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - MJExtension (3.0.10)
+  - SnapKit (0.21.0)
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - AFNetworking
   - MJExtension
+  - SnapKit
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 774ba644cb06c0beecee92dff8433f00ee4dc489
+PODFILE CHECKSUM: 2bfa2f16b07d4bb984238c742f90e995c6f49089
 
 COCOAPODS: 1.0.1

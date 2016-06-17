@@ -39,7 +39,6 @@ class HYAccountTool: NSObject {
         let fileName = filePath.stringByAppendingPathComponent("account.plist")
         
         //MARK: - 这里需要加上取出来的数据是否为空的判断,-----不用加在这里，对返回结果进行判断就可以了
-        
         return HYAccessTokenModel.mj_objectWithFile(fileName)
         
     }

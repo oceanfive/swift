@@ -22,5 +22,7 @@ target 'swift_two' do
   pod 'SVProgressHUD'
   
   pod 'MJExtension'
+  
+  pod 'SnapKit'
 
 end

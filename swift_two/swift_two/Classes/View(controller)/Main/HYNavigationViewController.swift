@@ -11,7 +11,7 @@ import UIKit
 class HYNavigationViewController: UINavigationController {
 
     
-    
+    //MARK: - 设置主题
     override class func initialize(){
         
         let apperanceOfNavigationBar: UINavigationBar = UINavigationBar.appearance()

@@ -12,8 +12,19 @@ class HYBaseTableViewController: UITableViewController, HYVistorViewDelegate {
 
     
     //记录用户登录情况
-    var isLogin: Bool = true
-    var vistorView: HYVistorView?
+    private var isLogin: Bool = {
+        //MARK: - 进行界面跳转判断，
+        let account: HYAccessTokenModel? = HYAccountTool.getAccount()
+        if account == nil {
+            
+            return false
+        }else {
+            
+            return true
+        }
+        
+    }()
+    private var vistorView: HYVistorView?
     
     //MARK: - 在这个方法中实现访客界面（不调用函数super.loadView()）还是已注册用户界面（调用函数super.loadView()）
     //MARK: - 这个方案是可行的，不要被颜色迷惑了自己，
@@ -22,7 +33,7 @@ class HYBaseTableViewController: UITableViewController, HYVistorViewDelegate {
     }
     
     
-    func loadVistorView(){
+    private func loadVistorView(){
         
         vistorView = HYVistorView()
         vistorView?.vistorViewDelegate = self
@@ -38,7 +49,7 @@ class HYBaseTableViewController: UITableViewController, HYVistorViewDelegate {
     //MARK: - HYVistorViewDelegate
     func registerBtnDidClick() {
         
-        print("需要跳转到注册界面")
+        print("跳转到注册界面")
         
     }
     
@@ -55,11 +66,6 @@ class HYBaseTableViewController: UITableViewController, HYVistorViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
