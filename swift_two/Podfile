@@ -23,6 +23,8 @@ target 'swift_two' do
   
   pod 'MJExtension'
   
-  pod 'SnapKit'
+  pod 'Masonry'
+  
+  pod 'SDWebImage'
 
 end
