@@ -12,10 +12,21 @@
 //
 //#endif /* ShareSDK_Bridging_Header_h */
 
-
+// 自定义授权登录界面需要导入的头文件
 #import <ShareSDK/ShareSDK.h>
+
+// 弹出分享菜单需要导入的头文件
 #import <ShareSDKUI/ShareSDK+SSUI.h>
+// 自定义分享菜单栏需要导入的头文件
+#import <ShareSDKUI/SSUIShareActionSheetStyle.h>
+// 自定义分享编辑界面需要导入的头文件
+#import <ShareSDKUI/SSUIEditorViewStyle.h>
+
+
+
 #import <ShareSDKConnector/ShareSDKConnector.h>
+
+
 
 //腾讯SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>

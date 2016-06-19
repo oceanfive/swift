@@ -109,6 +109,12 @@
 		8EC7EFD61D16C7B9006D4845 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC7EFB11D16C7B9006D4845 /* ShareSDKConnector.framework */; };
 		8EC7EFD71D16C7B9006D4845 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC7EFB11D16C7B9006D4845 /* ShareSDKConnector.framework */; };
 		8EC7EFD81D16C7B9006D4845 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC7EFB11D16C7B9006D4845 /* ShareSDKConnector.framework */; };
+		8EE030DE1D16F82900C94AB2 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE030DC1D16F82900C94AB2 /* MOBFoundation.framework */; };
+		8EE030DF1D16F82900C94AB2 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE030DC1D16F82900C94AB2 /* MOBFoundation.framework */; };
+		8EE030E01D16F82900C94AB2 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE030DC1D16F82900C94AB2 /* MOBFoundation.framework */; };
+		8EE030E11D16F82900C94AB2 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE030DD1D16F82900C94AB2 /* SMS_SDK.framework */; };
+		8EE030E21D16F82900C94AB2 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE030DD1D16F82900C94AB2 /* SMS_SDK.framework */; };
+		8EE030E31D16F82900C94AB2 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE030DD1D16F82900C94AB2 /* SMS_SDK.framework */; };
 		92757E75712E54EACCD10EC8 /* Pods_swift_twoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD345D2FBE18526973B05DB /* Pods_swift_twoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -198,6 +204,8 @@
 		8EC7EFAF1D16C7B9006D4845 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		8EC7EFB01D16C7B9006D4845 /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
 		8EC7EFB11D16C7B9006D4845 /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
+		8EE030DC1D16F82900C94AB2 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		8EE030DD1D16F82900C94AB2 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		A9C09A485B8EDEC497BEC032 /* Pods-swift_twoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_twoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift_twoTests/Pods-swift_twoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B7F42554002C7550654011 /* Pods_swift_two.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_two.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AA5BB5040FF086392A37E6 /* Pods-swift_two.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_two.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift_two/Pods-swift_two.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +220,7 @@
 				8EC7EFCA1D16C7B9006D4845 /* libWeChatSDK.a in Frameworks */,
 				8EC7EFBB1D16C7B9006D4845 /* ShareSDKUI.framework in Frameworks */,
 				8EC7EFBE1D16C7B9006D4845 /* TencentOpenAPI.framework in Frameworks */,
+				8EE030E11D16F82900C94AB2 /* SMS_SDK.framework in Frameworks */,
 				8E66BD281D1684D200EA3943 /* MessageUI.framework in Frameworks */,
 				8E66BD261D1684B400EA3943 /* libsqlite3.tbd in Frameworks */,
 				8E66BD241D1684AC00EA3943 /* ImageIO.framework in Frameworks */,
@@ -224,6 +233,7 @@
 				8EC7EFB51D16C7B9006D4845 /* ShareSDKExtension.framework in Frameworks */,
 				8EC7EFD01D16C7B9006D4845 /* MOBFoundation.framework in Frameworks */,
 				8E66BD1C1D16846F00EA3943 /* libicucore.tbd in Frameworks */,
+				8EE030DE1D16F82900C94AB2 /* MOBFoundation.framework in Frameworks */,
 				79A03BB7102F470B681EF0C6 /* Pods_swift_two.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +243,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC7EFD11D16C7B9006D4845 /* MOBFoundation.framework in Frameworks */,
+				8EE030E21D16F82900C94AB2 /* SMS_SDK.framework in Frameworks */,
 				8EC7EFCB1D16C7B9006D4845 /* libWeChatSDK.a in Frameworks */,
+				8EE030DF1D16F82900C94AB2 /* MOBFoundation.framework in Frameworks */,
 				8EC7EFBF1D16C7B9006D4845 /* TencentOpenAPI.framework in Frameworks */,
 				8EC7EFC51D16C7B9006D4845 /* libWeiboSDK.a in Frameworks */,
 				6DD9B657EC9D196467DB1444 /* Pods_swift_twoTests.framework in Frameworks */,
@@ -249,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC7EFD21D16C7B9006D4845 /* MOBFoundation.framework in Frameworks */,
+				8EE030E31D16F82900C94AB2 /* SMS_SDK.framework in Frameworks */,
 				8EC7EFCC1D16C7B9006D4845 /* libWeChatSDK.a in Frameworks */,
+				8EE030E01D16F82900C94AB2 /* MOBFoundation.framework in Frameworks */,
 				8EC7EFC01D16C7B9006D4845 /* TencentOpenAPI.framework in Frameworks */,
 				8EC7EFC61D16C7B9006D4845 /* libWeiboSDK.a in Frameworks */,
 				92757E75712E54EACCD10EC8 /* Pods_swift_twoUITests.framework in Frameworks */,
@@ -356,6 +370,7 @@
 		8E75A0B01D1457E800C97654 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				8EE030DB1D16F82900C94AB2 /* SMS_SDK */,
 				8EC7EF8F1D16C7B9006D4845 /* ShareSDK */,
 			);
 			path = Others;
@@ -566,6 +581,15 @@
 				8EC7EFB11D16C7B9006D4845 /* ShareSDKConnector.framework */,
 			);
 			path = Required;
+			sourceTree = "<group>";
+		};
+		8EE030DB1D16F82900C94AB2 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				8EE030DC1D16F82900C94AB2 /* MOBFoundation.framework */,
+				8EE030DD1D16F82900C94AB2 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
 		A624C3F9C06DAD0044F10D34 /* Pods */ = {
@@ -1060,9 +1084,10 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/swift_two/Classes/Others/SMS_SDK",
 				);
 				INFOPLIST_FILE = swift_two/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1106,9 +1131,10 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/swift_two/Classes/Others/SMS_SDK",
 				);
 				INFOPLIST_FILE = swift_two/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1149,6 +1175,7 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/swift_two/Classes/Others/SMS_SDK",
 				);
 				INFOPLIST_FILE = swift_twoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1175,6 +1202,7 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/swift_two/Classes/Others/SMS_SDK",
 				);
 				INFOPLIST_FILE = swift_twoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1200,6 +1228,7 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/swift_two/Classes/Others/SMS_SDK",
 				);
 				INFOPLIST_FILE = swift_twoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1226,6 +1255,7 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/swift_two/Classes/Others/SMS_SDK",
 				);
 				INFOPLIST_FILE = swift_twoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

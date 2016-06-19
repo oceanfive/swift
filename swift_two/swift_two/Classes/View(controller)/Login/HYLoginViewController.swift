@@ -31,6 +31,7 @@ class HYLoginViewController: UIViewController {
         view.backgroundColor = UIColor.whiteColor()
         setup()
 
+        
         registerNotification()
     }
 
@@ -86,7 +87,7 @@ class HYLoginViewController: UIViewController {
         
         
         //othersLoginBtn
-        othersLoginBtn.frame = CGRectMake(140, 600, 100, 50)
+        othersLoginBtn.frame = CGRectMake(140, 80, 100, 50)
         othersLoginBtn.setTitle("第三方登录", forState: UIControlState.Normal)
         othersLoginBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         othersLoginBtn.addTarget(self, action: "jumpToOthers", forControlEvents: UIControlEvents.TouchUpInside)
@@ -94,7 +95,7 @@ class HYLoginViewController: UIViewController {
         
         
         //sharedBtn
-        sharedBtn.frame = CGRectMake(50, 600, 100, 50)
+        sharedBtn.frame = CGRectMake(50, 80, 100, 50)
         sharedBtn.setTitle("分享", forState: UIControlState.Normal)
         sharedBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         sharedBtn.addTarget(self, action: "sharedBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
@@ -103,6 +104,7 @@ class HYLoginViewController: UIViewController {
         
     }
     
+    //MARK: - 继承第三方分享
     func sharedBtnClick(){
         
         print("sharedBtnClick")
@@ -115,24 +117,83 @@ class HYLoginViewController: UIViewController {
             title : "分享",
             type : SSDKContentType.Image)
         
+        //MARK: - 分享菜单UI调整
+        // 设置分享菜单的背景颜色 -- 后面调用方法中的view的背景颜色
+//        SSUIShareActionSheetStyle.setActionSheetBackgroundColor(UIColor.orangeColor())
+        // 设置分享菜单颜色
+        SSUIShareActionSheetStyle.setActionSheetColor(UIColor.whiteColor())
+        // 设置分享菜单－取消按钮背景颜色
+        SSUIShareActionSheetStyle.setCancelButtonBackgroundColor(UIColor.whiteColor())
+        // 设置分享菜单－取消按钮的文本颜色
+        SSUIShareActionSheetStyle.setCancelButtonLabelColor(UIColor.redColor())
+        // 设置分享菜单－社交平台文本颜色
+        SSUIShareActionSheetStyle.setItemNameColor(UIColor.blackColor())
+        // 设置分享菜单－社交平台文本字体
+        SSUIShareActionSheetStyle.setItemNameFont(UIFont.systemFontOfSize(10.0))
+        
+        
+        //MARK: - 分享编辑界面UI调整
+        SSUIEditorViewStyle.setTitle("分享")
+        SSUIEditorViewStyle.setTitleColor(UIColor.orangeColor())
+        SSUIEditorViewStyle.setCancelButtonLabel("取消")
+        SSUIEditorViewStyle.setCancelButtonLabelColor(UIColor.redColor())
+        SSUIEditorViewStyle.setShareButtonLabel("分享")
+        SSUIEditorViewStyle.setShareButtonLabelColor(UIColor.redColor())
+//        SSUIEditorViewStyle.setContentViewBackgroundColor(UIColor.greenColor())
+//        SSUIEditorViewStyle.setiPhoneNavigationBarBackgroundColor(UIColor.whiteColor())
+        
+        
+        //MARK: - 授权登录界面UI调整
+        SSDKAuthViewStyle.setTitle("授权登录")
+        SSDKAuthViewStyle.setTitleColor(UIColor.orangeColor())
+        SSDKAuthViewStyle.setCancelButtonLabel("取消")
+        SSDKAuthViewStyle.setCancelButtonLabelColor(UIColor.redColor())
+        SSDKAuthViewStyle.setNavigationBarBackgroundColor(UIColor.whiteColor())
+        
+        
+        
+    
         //2.进行分享
-        ShareSDK.share(SSDKPlatformType.TypeSinaWeibo, parameters: shareParames) { (state : SSDKResponseState, userData : [NSObject : AnyObject]!, contentEntity :SSDKContentEntity!, error : NSError!) -> Void in
+//        ShareSDK.share(SSDKPlatformType.TypeSinaWeibo, parameters: shareParames) { (state : SSDKResponseState, userData : [NSObject : AnyObject]!, contentEntity :SSDKContentEntity!, error : NSError!) -> Void in
+//            
+//            switch state{
+//                
+//            case SSDKResponseState.Success:
+//                print("分享成功")
+////                let alert = UIAlertView(title: "分享成功", message: "分享成功", delegate: self, cancelButtonTitle: "取消")
+////                alert.show()
+//            case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
+//            case SSDKResponseState.Cancel:  print("分享取消")
+//                
+//            default:
+//                break
+//            }
+//            
+//        }
+        
+        ShareSDK.showShareActionSheet(view, items: nil, shareParams: shareParames) { (state : SSDKResponseState, platformType: SSDKPlatformType, userData : [NSObject : AnyObject]!, contentEntity :SSDKContentEntity!, error : NSError!, end: Bool) -> Void in
             
-            switch state{
-                
-            case SSDKResponseState.Success:
-                print("分享成功")
-//                let alert = UIAlertView(title: "分享成功", message: "分享成功", delegate: self, cancelButtonTitle: "取消")
-//                alert.show()
-            case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
-            case SSDKResponseState.Cancel:  print("分享取消")
-                
-            default:
-                break
-            }
+                switch state{
+    
+                case SSDKResponseState.Success:
+                    print("分享成功")
+                    print("platformType---\(platformType)")
+                    print("userData---\(userData)")
+                    print("contentEntity--\(contentEntity)")
+    //                let alert = UIAlertView(title: "分享成功", message: "分享成功", delegate: self, cancelButtonTitle: "取消")
+    //                alert.show()
+                case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
+                case SSDKResponseState.Cancel:  print("分享取消")
+    
+                default:
+                    break
+                }
+            
         }
         
- 
+        
+
+        
     
     }
     
@@ -231,29 +292,7 @@ class HYLoginViewController: UIViewController {
             }
             
         }
-
-//        [ShareSDK getUserInfo:SSDKPlatformTypeQQ
-//            onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
-//            {
-//            if (state == SSDKResponseStateSuccess)
-//            {
-//            
-//            NSLog(@"uid=%@",user.uid);
-//            NSLog(@"%@",user.credential);
-//            NSLog(@"token=%@",user.credential.token);
-//            NSLog(@"nickname=%@",user.nickname);
-//            }
-//            
-//            else
-//            {
-//            NSLog(@"%@",error);
-//            }
-//            
-//            }];
-//        
-//        
-        
-    
+  
     }
     
     //MARK: - 销毁方法，移除监听者

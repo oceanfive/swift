@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
                     appInfo.SSDKSetupSinaWeiboByAppKey("50859610",
                         appSecret : "6c866d793f505dba472b3d6868656426",
-                        redirectUri : "http://www.sharesdk.cn",
+                        redirectUri : "http://weibo.com/u/3216382533/home?wvr=5",
                         authType : SSDKAuthTypeBoth)
                     break
                     
