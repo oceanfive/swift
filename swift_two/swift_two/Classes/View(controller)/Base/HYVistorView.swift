@@ -99,7 +99,7 @@ class HYVistorView: UIView {
     //点击登录按钮
      func clickloginBtn(){
         
-//        print("clickloginBtn")
+        print("clickloginBtn")
 //
         if ((vistorViewDelegate?.respondsToSelector("loginBtnDidClick")) != nil) {
         
@@ -109,6 +109,7 @@ class HYVistorView: UIView {
     }
      
     
+    //MARK: - 还可以通过设置约束来产生frame
     override func layoutSubviews() {
         super.layoutSubviews()
         

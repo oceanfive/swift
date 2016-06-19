@@ -44,7 +44,16 @@ let kNaviItemTitleFontOfHighlighted = UIFont.systemFontOfSize(15.0)
 let kNaviItemTitleColorOfHighlighted = UIColor.redColor()
 
 
+//MARK: - 第三方登录信息
 
+/*
+App Key
+14084daaa97b6
+
+App Secret
+eb42509eea896a142ba669eb0b071929
+
+*/
 
 
 
