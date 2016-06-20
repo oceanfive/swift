@@ -11,9 +11,6 @@ import AFNetworking
 
 class HYAccountViewModel: NSObject {
 
-    
-    
-    
     //获取accessToken - 使用第三方框架
     class func getAccessToken(code: String){
         

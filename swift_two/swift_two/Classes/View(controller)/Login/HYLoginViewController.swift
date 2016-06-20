@@ -9,9 +9,15 @@
 import UIKit
 import Masonry
 import SVProgressHUD
+import SSKeychain
+
 
 class HYLoginViewController: UIViewController {
 
+    //MARK: - 用户是否登录标记，这里声明类属性，不是对象属性，因为类属性可以保证唯一，对象属性，每一个对象的都不相同
+    //MARK: - oc中可以通过类方法类记录用户登录情况
+    static var loginFlag: Bool?
+    
     private let iconImageView = UIImageView()
     
     private let usernameTextField = UITextField()
@@ -24,6 +30,8 @@ class HYLoginViewController: UIViewController {
     private let othersLoginBtn = UIButton()
     
     private let sharedBtn = UIButton()
+    
+    private let smsBtn = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +50,7 @@ class HYLoginViewController: UIViewController {
         usernameTextField.frame = CGRectMake(0, 250, kScreenW, 55)
         usernameTextField.placeholder = "邮箱/手机号"
         usernameTextField.leftViewMode = UITextFieldViewMode.Always
+        usernameTextField.clearButtonMode = UITextFieldViewMode.WhileEditing
         view.addSubview(usernameTextField)
         
         
@@ -95,14 +104,49 @@ class HYLoginViewController: UIViewController {
         
         
         //sharedBtn
-        sharedBtn.frame = CGRectMake(50, 80, 100, 50)
+        sharedBtn.frame = CGRectMake(70, 80, 100, 50)
         sharedBtn.setTitle("分享", forState: UIControlState.Normal)
         sharedBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         sharedBtn.addTarget(self, action: "sharedBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(sharedBtn)
         
         
+        //smsBtn
+        smsBtn.frame = CGRectMake(2, 80, 100, 50)
+        smsBtn.setTitle("短信验证", forState: UIControlState.Normal)
+        smsBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        smsBtn.addTarget(self, action: "smsBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
+        view.addSubview(smsBtn)
+        
     }
+    
+    //MARK: - 短信验证
+    func smsBtnClick()  {
+        
+        print("smsBtnClick")
+        
+        //        SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethodSMS, phoneNumber: "15876580585", zone: "86", customIdentifier: "我来了") { (<#NSError!#>) in
+        //            <#code#>
+        //        }
+        
+//        SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethodSMS, phoneNumber: "15876580585", zone: "86", customIdentifier: "我来了") { (error: NSError!) in
+//            
+//            if (error == nil) {
+//                
+//                print("发送成功")
+//                
+//            }else {
+//                
+//                print("发送失败")
+//            }
+//            
+//        }
+//        
+        
+        
+    }
+    
+    
     
     //MARK: - 继承第三方分享
     func sharedBtnClick(){
@@ -200,26 +244,141 @@ class HYLoginViewController: UIViewController {
     //MARK: - 登录判断
     func clickloginBtn(){
     
+        //MARK: - 删除钥匙串，用于测试
+//        SSKeychain.deletePasswordForService(NSBundle.mainBundle().bundleIdentifier, account: usernameTextField.text)
+        
+        //MARK: - 发送登录网络请求
         let logiResult = HYLoginViewModel.login(usernameTextField.text!, password:passwordTextField.text!)
         
+        //MARK: - 根据网络请求的响应来判断登录状态----能够来到这里代表用户输入的账号名称和密码是正确的，根据用户输入的账号从钥匙串中取出密码然后进行判断，如果取得到的话，代表的是已经登录过，如果取不到的话，代表的是第一次登录
         if logiResult == HYLoginViewModel.LoginResult.Sucess {
             
             SVProgressHUD.showSuccessWithStatus("登录成功")
+            HYLoginViewController.loginFlag = true
             print("登录成功,跳转到主界面或者新特性界面")
+            //MARK: - 保存用户的账号和密码，需要进行加密
+     
+            let password = SSKeychain.passwordForService(NSBundle.mainBundle().bundleIdentifier, account: usernameTextField.text)
+            
+            if password != nil { // 不是第一登录,已经登录过账号，去主界面
+            
+                let keywindow = UIApplication.sharedApplication().keyWindow
+                keywindow?.rootViewController = HYTabbarViewController()
+    
+            }else { //未登录过账号，去新特性界面，然后去主界面
+            
+                //MARK: - 这里需要先保存密码，再去新特性界面
+                SSKeychain.setPassword(passwordTextField.text, forService: NSBundle.mainBundle().bundleIdentifier, account: usernameTextField.text)
+                
+                let keywindow = UIApplication.sharedApplication().keyWindow
+                keywindow?.rootViewController = HYNewFeatureViewController()
+            
+            }
+            
+            
+            //MARK: - 保存密码到偏好设置中
+//            print(SSKeychainQuery().account)
+//            print(SSKeychainQuery().service)
+//            print(SSKeychainQuery().label)
+//            print(SSKeychainQuery().password)
+//            let username: AnyObject?  = NSUserDefaults.standardUserDefaults().valueForKey("username")
+//            let password: AnyObject?  = NSUserDefaults.standardUserDefaults().valueForKey("password")
+            
+//            if username != nil && password != nil { //已经登录过账号，去主界面
+//
+//                let keywindow = UIApplication.sharedApplication().keyWindow
+//                keywindow?.rootViewController = HYTabbarViewController()
+//     
+//            }else {  // 未登录过账号，去新特性界面，然后去主界面
+//                //MARK: - 保存用户密码到钥匙串中
+ 
+//                //MARK: - 保护用户信息到偏好设置中 --- 不推荐使用
+////                NSUserDefaults.standardUserDefaults().setValue(usernameTextField.text, forKey: "username")
+////                NSUserDefaults.standardUserDefaults().setValue(passwordTextField.text, forKey: "password")
+////                NSUserDefaults.standardUserDefaults().synchronize()
+////                
+//                let keywindow = UIApplication.sharedApplication().keyWindow
+//                keywindow?.rootViewController = HYNewFeatureViewController()
+//            }
+   
         
         }else if logiResult == HYLoginViewModel.LoginResult.UserNameError {
         
             SVProgressHUD.showErrorWithStatus("用户名称错误，请重新输入!")
+            HYLoginViewController.loginFlag = false
             print("用户名称错误，请重新输入")
         
         }else {
+            
             SVProgressHUD.showErrorWithStatus("用户密码错误，请重新输入!")
+            HYLoginViewController.loginFlag = false
             print("用户密码错误，请重新输入!")
         
         }
         
     
     }
+    
+    func jumpToOthers(){
+        
+        print("跳转到第三方登录")
+        //跳转第三方登录
+        ShareSDK.getUserInfo(SSDKPlatformType.TypeSinaWeibo) { (state: SSDKResponseState, user: SSDKUser!, error: NSError!) -> Void in
+            
+            switch state {
+                
+            case SSDKResponseState.Success:
+                
+                HYLoginViewController.loginFlag = true
+                
+                print("sucess---\(user.uid)---\(user.credential)---\(user.credential.token)---\(user.nickname)")
+                
+            case SSDKResponseState.Fail:
+                
+                HYLoginViewController.loginFlag = false
+                print("fail--\(error)")
+                
+            case SSDKResponseState.Cancel:
+                
+                HYLoginViewController.loginFlag = false
+                print("cancel")
+                
+            default:
+                HYLoginViewController.loginFlag = false
+                print("other")
+                
+            }
+            
+        }
+        
+        //登陆后跳转到新特性界面
+        
+        
+        let keywindow = UIApplication.sharedApplication().keyWindow
+        
+        keywindow?.rootViewController = HYNewFeatureViewController()
+        
+        
+        //MARK: - 进行界面跳转判断，
+        //                let account: HYAccessTokenModel? = HYAccountTool.getAccount()
+        //
+        //                if account == nil {
+        //
+        //                    let oauthViewController = HYNavigationViewController(rootViewController: HYOAuthViewController())
+        //
+        //                    window?.rootViewController = oauthViewController
+        //
+        //                }else {
+        //
+        //                    window?.rootViewController = HYTabbarViewController()
+        //                    
+        //                }
+        
+        
+    }
+    
+
+    
 
     //MARK: - 注册通知
     func registerNotification(){
@@ -269,33 +428,7 @@ class HYLoginViewController: UIViewController {
     
     }
     
-    func jumpToOthers(){
-    
-        print("跳转到第三方登录")
-        //
-        ShareSDK.getUserInfo(SSDKPlatformType.TypeSinaWeibo) { (state: SSDKResponseState, user: SSDKUser!, error: NSError!) -> Void in
-            
-            switch state {
-            
-            case SSDKResponseState.Success:
-                print("sucess---\(user.uid)---\(user.credential)---\(user.credential.token)---\(user.nickname)")
-                
-            case SSDKResponseState.Fail:
-                print("fail--\(error)")
-                
-            case SSDKResponseState.Cancel:
-                print("cancel")
-            
-            default:
-                print("other")
-            
-            }
-            
-        }
-  
-    }
-    
-    //MARK: - 销毁方法，移除监听者
+       //MARK: - 销毁方法，移除监听者
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self)
         NSNotificationCenter.defaultCenter().removeObserver(self)

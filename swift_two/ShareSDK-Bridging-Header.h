@@ -22,11 +22,7 @@
 // 自定义分享编辑界面需要导入的头文件
 #import <ShareSDKUI/SSUIEditorViewStyle.h>
 
-
-
 #import <ShareSDKConnector/ShareSDKConnector.h>
-
-
 
 //腾讯SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
@@ -37,4 +33,15 @@
 
 //新浪微博SDK头文件
 #import "WeiboSDK.h"
+
+//短信验证码
+//#import <SMS_SDK/SMSSDK.h>
+
+
+
+
+
+
+
+
 

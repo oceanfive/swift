@@ -10,6 +10,7 @@ import UIKit
 
 class HYLoginViewModel: NSObject {
 
+    //登录结果状态判断
     enum LoginResult: Int {
 
        case UserNameError = 0

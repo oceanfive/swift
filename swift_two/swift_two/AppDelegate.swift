@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+        //MARK: - 第三方分享和登录
         /**
         *  设置ShareSDK的appKey，如果尚未在ShareSDK官网注册过App，请移步到http://mob.com/login 登录后台进行应用注册，
         *  在将生成的AppKey传入到此方法中。
@@ -107,7 +108,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         
         
-        
+        //MARK: - 第三方短信验证码
+//        SMSSDK.registerApp("140b4fbf91f54", withSecret: "67fee50bc2eb044dcdaf467c8b0fa417")
+//        
+////        SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethodSMS, phoneNumber: "15876580585", zone: "86", customIdentifier: "我来了") { (<#NSError!#>) in
+////            <#code#>
+////        }
+//        
+//        SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethodSMS, phoneNumber: "15876580585", zone: "86", customIdentifier: "我来了") { (error: NSError!) in
+//            
+//            if (error == nil) {
+//            
+//                print("发送成功")
+//                
+//            }else {
+//            
+//                print("发送失败")
+//            }
+//            
+//        }
         
         
         return true

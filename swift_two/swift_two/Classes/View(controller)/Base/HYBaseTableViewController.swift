@@ -7,23 +7,15 @@
 //
 
 import UIKit
+import SSKeychain
+
 
 class HYBaseTableViewController: UITableViewController, HYVistorViewDelegate {
 
     
     //记录用户登录情况
-    private var isLogin: Bool = {
-        //MARK: - 进行界面跳转判断，
-        let account: HYAccessTokenModel? = HYAccountTool.getAccount()
-        if account == nil {
-            
-            return false
-        }else {
-            
-            return true
-        }
-        
-    }()
+    private var isLogin: Bool = HYLoginViewController.loginFlag!
+    
     private var vistorView: HYVistorView?
     
     //MARK: - 在这个方法中实现访客界面（不调用函数super.loadView()）还是已注册用户界面（调用函数super.loadView()）
