@@ -27,10 +27,14 @@ let client_secret = "528d174ef961f18dfe3acce2be8b1e69"
 let grant_type = "authorization_code"
 
 
+//MARK: - 微博相关接口
+//获取当前登录用户及其所关注（授权）用户的最新微博
+let kHome_timelineString = "https://api.weibo.com/2/statuses/home_timeline.json"
+
+
 //MARK: - tabBar属性
 let kTabBarTtitleFont = UIFont.systemFontOfSize(12.0)
 let kTabBarTintColor = UIColor.orangeColor()
-
 
 
 //MARK: - navigationBar 和 左右item不同状态下的 的属性
@@ -42,6 +46,10 @@ let kNaviItemTitleColorOfNormal = UIColor.orangeColor()
 
 let kNaviItemTitleFontOfHighlighted = UIFont.systemFontOfSize(15.0)
 let kNaviItemTitleColorOfHighlighted = UIColor.redColor()
+
+//MARK: - cell的重用标示符
+//主页
+let kHomeTableCellIdentifier = "homeTableCellIdentifier"
 
 
 //MARK: - 第三方登录信息

@@ -14,7 +14,23 @@ class HYBaseTableViewController: UITableViewController, HYVistorViewDelegate {
 
     
     //记录用户登录情况
-    private var isLogin: Bool = HYLoginViewController.loginFlag!
+    private var isLogin: Bool =  HYLoginViewController.loginFlag!
+//        {
+//        
+//        let account: HYAccessTokenModel? = HYAccountTool.getAccount()
+//        
+//        if account == nil {
+//            
+//            return false
+//        }else {
+//            
+//            return true
+//            
+//        }
+//
+//        
+//    
+//    }()//HYLoginViewController.loginFlag!
     
     private var vistorView: HYVistorView?
     

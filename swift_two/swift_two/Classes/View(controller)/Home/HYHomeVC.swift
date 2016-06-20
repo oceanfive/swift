@@ -8,18 +8,33 @@
 
 import UIKit
 
+
 class HYHomeVC: HYBaseTableViewController {
 
+    var dataArray: [HYStatuses] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        view.backgroundColor = UIColor.redColor()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        HYStausInfoViewModel.getStatusesInfo({ (data: NSData?, response: NSURLResponse?) -> () in
+            print("成功")
+            
+            let tempDataArr = try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.init(rawValue: 0))
+            
+            let modelArray = HYStatuses.mj_objectArrayWithKeyValuesArray(tempDataArr!["statuses"])
+            
+//            print(modelArray)
+//MARK: -  Reference to property 'dataArray' in closure requires explicit 'self.' to make capture semantics explicit 在闭包内访问属性，需要添加self
+            self.dataArray = modelArray as! [HYStatuses]
+ 
+            print(self.dataArray)
+            
+            }) { (error: NSError?) -> () in
+                
+                print("失败")
+                
+        }
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,33 +45,33 @@ class HYHomeVC: HYBaseTableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+     
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+
+        return dataArray.count
     }
 
-    /*
+ 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let identifier: String = "cell"
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
+        var cell = tableView.dequeueReusableCellWithIdentifier(identifier)
 
-        if cell == 0 {
+        if cell == nil {
         
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: identifier)
         }
         
-        cell.textLabel?.text = "hahahhaha"
-        cell.detailTextLabel?.text = "hehhehehhe"
+        cell!.textLabel?.text = "hahahhaha"
+        cell!.detailTextLabel?.text = "hehhehehhe"
 
-        return cell
+        return cell!
     }
-    */
+  
 
     /*
     // Override to support conditional editing of the table view.

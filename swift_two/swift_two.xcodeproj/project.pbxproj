@@ -70,6 +70,30 @@
 		8E75A0FD1D14655500C97654 /* HYLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */; };
 		8E75A0FE1D14655500C97654 /* HYLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */; };
 		8E75A0FF1D14655500C97654 /* HYLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */; };
+		8E90B81F1D17E1DE00EFB2BD /* HYHomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B81E1D17E1DE00EFB2BD /* HYHomeTableCell.swift */; };
+		8E90B8201D17E1DE00EFB2BD /* HYHomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B81E1D17E1DE00EFB2BD /* HYHomeTableCell.swift */; };
+		8E90B8211D17E1DE00EFB2BD /* HYHomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B81E1D17E1DE00EFB2BD /* HYHomeTableCell.swift */; };
+		8E90B8231D17E70200EFB2BD /* HYStatusContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8221D17E70200EFB2BD /* HYStatusContentView.swift */; };
+		8E90B8241D17E70200EFB2BD /* HYStatusContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8221D17E70200EFB2BD /* HYStatusContentView.swift */; };
+		8E90B8251D17E70200EFB2BD /* HYStatusContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8221D17E70200EFB2BD /* HYStatusContentView.swift */; };
+		8E90B8271D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8261D17E71B00EFB2BD /* HYStatusToolBarView.swift */; };
+		8E90B8281D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8261D17E71B00EFB2BD /* HYStatusToolBarView.swift */; };
+		8E90B8291D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8261D17E71B00EFB2BD /* HYStatusToolBarView.swift */; };
+		8E90B82B1D17EAA300EFB2BD /* HYStausInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B82A1D17EAA300EFB2BD /* HYStausInfoViewModel.swift */; };
+		8E90B82C1D17EAA300EFB2BD /* HYStausInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B82A1D17EAA300EFB2BD /* HYStausInfoViewModel.swift */; };
+		8E90B82D1D17EAA300EFB2BD /* HYStausInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B82A1D17EAA300EFB2BD /* HYStausInfoViewModel.swift */; };
+		8E90B82F1D1801CF00EFB2BD /* HYStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B82E1D1801CF00EFB2BD /* HYStatuses.swift */; };
+		8E90B8301D1801CF00EFB2BD /* HYStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B82E1D1801CF00EFB2BD /* HYStatuses.swift */; };
+		8E90B8311D1801CF00EFB2BD /* HYStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B82E1D1801CF00EFB2BD /* HYStatuses.swift */; };
+		8E90B8331D18027300EFB2BD /* HYUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8321D18027300EFB2BD /* HYUser.swift */; };
+		8E90B8341D18027300EFB2BD /* HYUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8321D18027300EFB2BD /* HYUser.swift */; };
+		8E90B8351D18027300EFB2BD /* HYUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8321D18027300EFB2BD /* HYUser.swift */; };
+		8E90B8371D1804E600EFB2BD /* HYPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8361D1804E600EFB2BD /* HYPhoto.swift */; };
+		8E90B8381D1804E600EFB2BD /* HYPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8361D1804E600EFB2BD /* HYPhoto.swift */; };
+		8E90B8391D1804E600EFB2BD /* HYPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8361D1804E600EFB2BD /* HYPhoto.swift */; };
+		8E90B8B71D184F1B00EFB2BD /* HYStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8B61D184F1B00EFB2BD /* HYStatusFrame.swift */; };
+		8E90B8B81D184F1B00EFB2BD /* HYStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8B61D184F1B00EFB2BD /* HYStatusFrame.swift */; };
+		8E90B8B91D184F1B00EFB2BD /* HYStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90B8B61D184F1B00EFB2BD /* HYStatusFrame.swift */; };
 		8ECE0B6C1D1702B200ADC791 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE0B471D1702B200ADC791 /* ShareSDK.framework */; };
 		8ECE0B6D1D1702B200ADC791 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE0B471D1702B200ADC791 /* ShareSDK.framework */; };
 		8ECE0B6E1D1702B200ADC791 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE0B471D1702B200ADC791 /* ShareSDK.framework */; };
@@ -179,6 +203,14 @@
 		8E75A0F41D145D3500C97654 /* HYProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYProfileVC.swift; sourceTree = "<group>"; };
 		8E75A0F81D145F6200C97654 /* HYAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAccountViewModel.swift; sourceTree = "<group>"; };
 		8E75A0FC1D14655500C97654 /* HYLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLoginViewController.swift; sourceTree = "<group>"; };
+		8E90B81E1D17E1DE00EFB2BD /* HYHomeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYHomeTableCell.swift; sourceTree = "<group>"; };
+		8E90B8221D17E70200EFB2BD /* HYStatusContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYStatusContentView.swift; sourceTree = "<group>"; };
+		8E90B8261D17E71B00EFB2BD /* HYStatusToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYStatusToolBarView.swift; sourceTree = "<group>"; };
+		8E90B82A1D17EAA300EFB2BD /* HYStausInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYStausInfoViewModel.swift; sourceTree = "<group>"; };
+		8E90B82E1D1801CF00EFB2BD /* HYStatuses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYStatuses.swift; sourceTree = "<group>"; };
+		8E90B8321D18027300EFB2BD /* HYUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYUser.swift; sourceTree = "<group>"; };
+		8E90B8361D1804E600EFB2BD /* HYPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPhoto.swift; sourceTree = "<group>"; };
+		8E90B8B61D184F1B00EFB2BD /* HYStatusFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYStatusFrame.swift; sourceTree = "<group>"; };
 		8ECE0B471D1702B200ADC791 /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		8ECE0B4A1D1702B200ADC791 /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
 		8ECE0B4B1D1702B200ADC791 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
@@ -368,6 +400,10 @@
 			isa = PBXGroup;
 			children = (
 				8E75A0F01D145D2F00C97654 /* HYAccessTokenModel.swift */,
+				8E90B82E1D1801CF00EFB2BD /* HYStatuses.swift */,
+				8E90B8321D18027300EFB2BD /* HYUser.swift */,
+				8E90B8361D1804E600EFB2BD /* HYPhoto.swift */,
+				8E90B8B61D184F1B00EFB2BD /* HYStatusFrame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,6 +470,9 @@
 			isa = PBXGroup;
 			children = (
 				8E75A0C81D145CBB00C97654 /* HYHomeVC.swift */,
+				8E90B81E1D17E1DE00EFB2BD /* HYHomeTableCell.swift */,
+				8E90B8221D17E70200EFB2BD /* HYStatusContentView.swift */,
+				8E90B8261D17E71B00EFB2BD /* HYStatusToolBarView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -493,6 +532,7 @@
 			children = (
 				8E75A0F81D145F6200C97654 /* HYAccountViewModel.swift */,
 				8E18B1A51D14FDFE004AC6AD /* HYLoginViewModel.swift */,
+				8E90B82A1D17EAA300EFB2BD /* HYStausInfoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -903,17 +943,25 @@
 				8E75A0E91D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */,
 				8E18B1A61D14FDFE004AC6AD /* HYLoginViewModel.swift in Sources */,
 				8E75A0E11D145D0900C97654 /* HYVistorView.swift in Sources */,
+				8E90B8331D18027300EFB2BD /* HYUser.swift in Sources */,
+				8E90B8371D1804E600EFB2BD /* HYPhoto.swift in Sources */,
 				8E75A0C51D145CAF00C97654 /* HYAccountTool.swift in Sources */,
 				8E75A0D11D145CD300C97654 /* HYNavigationViewController.swift in Sources */,
 				8E75A0ED1D145D2300C97654 /* HYOAuthViewController.swift in Sources */,
+				8E90B82B1D17EAA300EFB2BD /* HYStausInfoViewModel.swift in Sources */,
 				8E75A0C11D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
 				8E75A0E51D145D1100C97654 /* HYMessageVC.swift in Sources */,
 				8E75A0CD1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
+				8E90B8B71D184F1B00EFB2BD /* HYStatusFrame.swift in Sources */,
+				8E90B81F1D17E1DE00EFB2BD /* HYHomeTableCell.swift in Sources */,
 				8E75A0FD1D14655500C97654 /* HYLoginViewController.swift in Sources */,
 				8E75A0811D14510600C97654 /* AppDelegate.swift in Sources */,
+				8E90B82F1D1801CF00EFB2BD /* HYStatuses.swift in Sources */,
 				8E75A0F91D145F6200C97654 /* HYAccountViewModel.swift in Sources */,
 				8E75A0D51D145CE000C97654 /* HYTabBar.swift in Sources */,
+				8E90B8271D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */,
 				8E75A0DD1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
+				8E90B8231D17E70200EFB2BD /* HYStatusContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -921,10 +969,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E90B8B81D184F1B00EFB2BD /* HYStatusFrame.swift in Sources */,
 				8E75A0F21D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */,
 				8E75A0DA1D145CEE00C97654 /* Global.swift in Sources */,
 				8E75A0CA1D145CBB00C97654 /* HYHomeVC.swift in Sources */,
 				8E75A0F61D145D3500C97654 /* HYProfileVC.swift in Sources */,
+				8E90B8301D1801CF00EFB2BD /* HYStatuses.swift in Sources */,
 				8E75A0EA1D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */,
 				8E75A0E21D145D0900C97654 /* HYVistorView.swift in Sources */,
 				8E75A0C61D145CAF00C97654 /* HYAccountTool.swift in Sources */,
@@ -932,12 +982,18 @@
 				8E75A0EE1D145D2300C97654 /* HYOAuthViewController.swift in Sources */,
 				8E75A0C21D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
 				8E75A0E61D145D1100C97654 /* HYMessageVC.swift in Sources */,
+				8E90B8341D18027300EFB2BD /* HYUser.swift in Sources */,
 				8E75A0CE1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
 				8E75A0FE1D14655500C97654 /* HYLoginViewController.swift in Sources */,
+				8E90B82C1D17EAA300EFB2BD /* HYStausInfoViewModel.swift in Sources */,
+				8E90B8241D17E70200EFB2BD /* HYStatusContentView.swift in Sources */,
 				8E75A0961D14510600C97654 /* swift_twoTests.swift in Sources */,
 				8E75A0FA1D145F6200C97654 /* HYAccountViewModel.swift in Sources */,
+				8E90B8381D1804E600EFB2BD /* HYPhoto.swift in Sources */,
 				8E75A0D61D145CE000C97654 /* HYTabBar.swift in Sources */,
+				8E90B8201D17E1DE00EFB2BD /* HYHomeTableCell.swift in Sources */,
 				8E75A0DE1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
+				8E90B8281D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,10 +1001,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E90B8B91D184F1B00EFB2BD /* HYStatusFrame.swift in Sources */,
 				8E75A0F31D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */,
 				8E75A0DB1D145CEE00C97654 /* Global.swift in Sources */,
 				8E75A0CB1D145CBB00C97654 /* HYHomeVC.swift in Sources */,
 				8E75A0F71D145D3500C97654 /* HYProfileVC.swift in Sources */,
+				8E90B8311D1801CF00EFB2BD /* HYStatuses.swift in Sources */,
 				8E75A0EB1D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */,
 				8E75A0E31D145D0900C97654 /* HYVistorView.swift in Sources */,
 				8E75A0C71D145CAF00C97654 /* HYAccountTool.swift in Sources */,
@@ -956,12 +1014,18 @@
 				8E75A0EF1D145D2300C97654 /* HYOAuthViewController.swift in Sources */,
 				8E75A0C31D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
 				8E75A0E71D145D1100C97654 /* HYMessageVC.swift in Sources */,
+				8E90B8351D18027300EFB2BD /* HYUser.swift in Sources */,
 				8E75A0CF1D145CCD00C97654 /* HYTabbarViewController.swift in Sources */,
 				8E75A0FF1D14655500C97654 /* HYLoginViewController.swift in Sources */,
+				8E90B82D1D17EAA300EFB2BD /* HYStausInfoViewModel.swift in Sources */,
+				8E90B8251D17E70200EFB2BD /* HYStatusContentView.swift in Sources */,
 				8E75A0A11D14510600C97654 /* swift_twoUITests.swift in Sources */,
 				8E75A0FB1D145F6200C97654 /* HYAccountViewModel.swift in Sources */,
+				8E90B8391D1804E600EFB2BD /* HYPhoto.swift in Sources */,
 				8E75A0D71D145CE000C97654 /* HYTabBar.swift in Sources */,
+				8E90B8211D17E1DE00EFB2BD /* HYHomeTableCell.swift in Sources */,
 				8E75A0DF1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
+				8E90B8291D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,7 +26,7 @@ class HYOAuthViewController: UIViewController, UIWebViewDelegate {
         //MARK: - 发送网络请求
         sendNetWork()
 
-        print(NSHomeDirectory())
+//        print(NSHomeDirectory())
    
     }
 

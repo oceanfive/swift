@@ -25,6 +25,9 @@ class HYAccountViewModel: NSObject {
             //保存用户账号信息
             HYAccountTool.saveAccount(response! as! [String : AnyObject])
 
+//MARK: - 设置用户登录标记为真
+            HYLoginViewController.loginFlag = true
+            
             //切换窗口到新特性窗口
             let keyWindow = UIApplication.sharedApplication().keyWindow
             

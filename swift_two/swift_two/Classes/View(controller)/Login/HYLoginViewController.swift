@@ -36,11 +36,15 @@ class HYLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(NSHomeDirectory())
         view.backgroundColor = UIColor.whiteColor()
         setup()
-
         
         registerNotification()
+        
+//        let keywindow = UIApplication.sharedApplication().keyWindow
+//        
+//        keywindow?.rootViewController = HYOAuthViewController()
     }
 
     //MARK: - 初始化界面
@@ -60,8 +64,7 @@ class HYLoginViewController: UIViewController {
         leftViewOfusername.enabled = false
         usernameTextField.leftView = leftViewOfusername
         
- 
-        
+
         //passwordTextField
         passwordTextField.frame = CGRectMake(0, CGRectGetMaxY(usernameTextField.frame), kScreenW, 55)
         passwordTextField.placeholder = "请输入密码"
@@ -96,7 +99,7 @@ class HYLoginViewController: UIViewController {
         
         
         //othersLoginBtn
-        othersLoginBtn.frame = CGRectMake(140, 80, 100, 50)
+        othersLoginBtn.frame = CGRectMake(140, 600, 100, 50)
         othersLoginBtn.setTitle("第三方登录", forState: UIControlState.Normal)
         othersLoginBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         othersLoginBtn.addTarget(self, action: "jumpToOthers", forControlEvents: UIControlEvents.TouchUpInside)
@@ -104,7 +107,7 @@ class HYLoginViewController: UIViewController {
         
         
         //sharedBtn
-        sharedBtn.frame = CGRectMake(70, 80, 100, 50)
+        sharedBtn.frame = CGRectMake(70, 600, 100, 50)
         sharedBtn.setTitle("分享", forState: UIControlState.Normal)
         sharedBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         sharedBtn.addTarget(self, action: "sharedBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
@@ -112,7 +115,7 @@ class HYLoginViewController: UIViewController {
         
         
         //smsBtn
-        smsBtn.frame = CGRectMake(2, 80, 100, 50)
+        smsBtn.frame = CGRectMake(2, 600, 100, 50)
         smsBtn.setTitle("短信验证", forState: UIControlState.Normal)
         smsBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         smsBtn.addTarget(self, action: "smsBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
@@ -244,6 +247,7 @@ class HYLoginViewController: UIViewController {
     //MARK: - 登录判断
     func clickloginBtn(){
     
+        
         //MARK: - 删除钥匙串，用于测试
 //        SSKeychain.deletePasswordForService(NSBundle.mainBundle().bundleIdentifier, account: usernameTextField.text)
         
@@ -322,41 +326,49 @@ class HYLoginViewController: UIViewController {
     func jumpToOthers(){
         
         print("跳转到第三方登录")
-        //跳转第三方登录
-        ShareSDK.getUserInfo(SSDKPlatformType.TypeSinaWeibo) { (state: SSDKResponseState, user: SSDKUser!, error: NSError!) -> Void in
-            
-            switch state {
-                
-            case SSDKResponseState.Success:
-                
-                HYLoginViewController.loginFlag = true
-                
-                print("sucess---\(user.uid)---\(user.credential)---\(user.credential.token)---\(user.nickname)")
-                
-            case SSDKResponseState.Fail:
-                
-                HYLoginViewController.loginFlag = false
-                print("fail--\(error)")
-                
-            case SSDKResponseState.Cancel:
-                
-                HYLoginViewController.loginFlag = false
-                print("cancel")
-                
-            default:
-                HYLoginViewController.loginFlag = false
-                print("other")
-                
-            }
-            
-        }
-        
-        //登陆后跳转到新特性界面
-        
         
         let keywindow = UIApplication.sharedApplication().keyWindow
+
+        keywindow?.rootViewController = HYOAuthViewController()
         
-        keywindow?.rootViewController = HYNewFeatureViewController()
+        
+        
+        
+        //跳转第三方登录
+//        ShareSDK.getUserInfo(SSDKPlatformType.TypeSinaWeibo) { (state: SSDKResponseState, user: SSDKUser!, error: NSError!) -> Void in
+//            
+//            switch state {
+//                
+//            case SSDKResponseState.Success:
+//                
+//                HYLoginViewController.loginFlag = true
+//                
+//                print("sucess---\(user.uid)---\(user.credential)---\(user.credential.token)---\(user.nickname)")
+//                
+//            case SSDKResponseState.Fail:
+//                
+//                HYLoginViewController.loginFlag = false
+//                print("fail--\(error)")
+//                
+//            case SSDKResponseState.Cancel:
+//                
+//                HYLoginViewController.loginFlag = false
+//                print("cancel")
+//                
+//            default:
+//                HYLoginViewController.loginFlag = false
+//                print("other")
+//                
+//            }
+//            
+//        }
+//        
+//        //登陆后跳转到新特性界面
+//        
+//        
+//        let keywindow = UIApplication.sharedApplication().keyWindow
+//        
+//        keywindow?.rootViewController = HYNewFeatureViewController()
         
         
         //MARK: - 进行界面跳转判断，
@@ -402,27 +414,32 @@ class HYLoginViewController: UIViewController {
         
         }
         
+        //MARK: - 这里使用三目运算符简化
+        leftViewOfusername.backgroundColor = usernameTextField.text != "" ? UIColor.blueColor() : UIColor.orangeColor()
         
-        if usernameTextField.text != "" {
-        
-            leftViewOfusername.backgroundColor = UIColor.blueColor()
-        
-        }else {
-            
-            leftViewOfusername.backgroundColor = UIColor.orangeColor()
-            
-        }
+        leftViewOfpassword.backgroundColor = passwordTextField.text != "" ? UIColor.blueColor() : UIColor.orangeColor()
         
         
-        if passwordTextField.text != "" {
+//        if usernameTextField.text != "" {
+//        
+//            leftViewOfusername.backgroundColor = UIColor.blueColor()
+//        
+//        }else {
+//            
+//            leftViewOfusername.backgroundColor = UIColor.orangeColor()
+//            
+//        }
         
-            leftViewOfpassword.backgroundColor = UIColor.blueColor()
-            
-        }else {
         
-            leftViewOfpassword.backgroundColor = UIColor.orangeColor()
-        
-        }
+//        if passwordTextField.text != "" {
+//        
+//            leftViewOfpassword.backgroundColor = UIColor.blueColor()
+//            
+//        }else {
+//        
+//            leftViewOfpassword.backgroundColor = UIColor.orangeColor()
+//        
+//        }
         
 //        print("textFieldDidChange")
     
