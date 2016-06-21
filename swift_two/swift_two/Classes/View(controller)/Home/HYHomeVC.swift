@@ -10,7 +10,7 @@ import UIKit
 
 class HYHomeVC: HYBaseTableViewController {
 //MARK: - 实例化数组 --- 两种方法！！
-    var dataArray = [HYStatuses]()
+    var dataArray = [HYStatusesFrame]()
     
 //    lazy var dataArray: NSMutableArray = {
 //    
@@ -39,8 +39,11 @@ class HYHomeVC: HYBaseTableViewController {
             
             let temp = modelArray as! [HYStatuses]
             
-            self.dataArray += temp
-
+            let statusesFrame = self.statusFrameArrayWithStatusArray(temp)
+            
+            self.dataArray += statusesFrame
+            
+            
             
 //MARK: -  Reference to property 'dataArray' in closure requires explicit 'self.' to make capture semantics explicit 在闭包内访问属性，需要添加self
 //MARK: - 实例化数组方法一！
@@ -62,12 +65,21 @@ class HYHomeVC: HYBaseTableViewController {
     }
     
     
-//    func statusFrameArrayWithStatusArray(statusArray: [HYStatuses]) -> [HYStatusesFrame]{
-//    
-//
-//    
-//    
-//    }
+//MARK: - 数据模型转为Frame数据模型
+    func statusFrameArrayWithStatusArray(statusArray: [HYStatuses]) -> [HYStatusesFrame]{
+    
+        var statusesFrameArray = [HYStatusesFrame]()
+        for temp in statusArray {
+            
+            let statusFrame = HYStatusesFrame()
+            statusFrame.status = temp
+            statusesFrameArray.append(statusFrame)
+   
+        }
+        
+        return statusesFrameArray
+
+    }
 
     // MARK: - Table view data source
 
@@ -86,6 +98,10 @@ class HYHomeVC: HYBaseTableViewController {
         
         let cell = HYHomeTableCell.homeTableCell(tableView)
         
+        let frameModel = dataArray[indexPath.row]
+        
+        cell.statusFrame = frameModel
+        
 //        cell.detailTextLabel?.text = "963963"
         
         return cell
@@ -95,7 +111,11 @@ class HYHomeVC: HYBaseTableViewController {
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return 200.0
+        let frameModel = dataArray[indexPath.row]
+        
+//        print(frameModel.cellHeight)
+        
+        return frameModel.cellHeight!
         
     }
     

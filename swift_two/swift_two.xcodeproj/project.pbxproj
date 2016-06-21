@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		6DD9B657EC9D196467DB1444 /* Pods_swift_twoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEB6D9B80EEC2B0C653920A /* Pods_swift_twoTests.framework */; };
 		79A03BB7102F470B681EF0C6 /* Pods_swift_two.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B7F42554002C7550654011 /* Pods_swift_two.framework */; };
+		8E12E5DC1D194AA600291760 /* HYStatusesFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB41D18E60B00E960A6 /* HYStatusesFrame.swift */; };
+		8E12E5DD1D194AA700291760 /* HYStatusesFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB41D18E60B00E960A6 /* HYStatusesFrame.swift */; };
+		8E12E5DE1D194AAA00291760 /* HYStatusContentFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB61D18E63200E960A6 /* HYStatusContentFrame.swift */; };
+		8E12E5DF1D194AAA00291760 /* HYStatusContentFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB61D18E63200E960A6 /* HYStatusContentFrame.swift */; };
+		8E12E5E01D194AAE00291760 /* HYStatusToolBarFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB81D18E64500E960A6 /* HYStatusToolBarFrame.swift */; };
+		8E12E5E11D194AAE00291760 /* HYStatusToolBarFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB81D18E64500E960A6 /* HYStatusToolBarFrame.swift */; };
+		8E12E5E21D194AB100291760 /* HYOrighinalStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBA1D18E66100E960A6 /* HYOrighinalStatusFrame.swift */; };
+		8E1755A71D199584008781D4 /* NSDate+HYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1755A61D199584008781D4 /* NSDate+HYCategory.m */; };
+		8E1755A81D199584008781D4 /* NSDate+HYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1755A61D199584008781D4 /* NSDate+HYCategory.m */; };
+		8E1755A91D199584008781D4 /* NSDate+HYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1755A61D199584008781D4 /* NSDate+HYCategory.m */; };
 		8E18B1A61D14FDFE004AC6AD /* HYLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B1A51D14FDFE004AC6AD /* HYLoginViewModel.swift */; };
 		8E214DB11D18E5C600E960A6 /* HYOriginalStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB01D18E5C600E960A6 /* HYOriginalStatusView.swift */; };
 		8E214DB31D18E5DA00E960A6 /* HYRetweetedStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB21D18E5DA00E960A6 /* HYRetweetedStatusView.swift */; };
@@ -18,6 +28,17 @@
 		8E214DBB1D18E66100E960A6 /* HYOrighinalStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBA1D18E66100E960A6 /* HYOrighinalStatusFrame.swift */; };
 		8E214DBD1D18E66F00E960A6 /* HYRetweetedStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBC1D18E66F00E960A6 /* HYRetweetedStatusFrame.swift */; };
 		8E214DBF1D18E98B00E960A6 /* HYPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBE1D18E98B00E960A6 /* HYPhotosView.swift */; };
+		8E27A29A1D19510F008388F0 /* HYOrighinalStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBA1D18E66100E960A6 /* HYOrighinalStatusFrame.swift */; };
+		8E27A29B1D195111008388F0 /* HYRetweetedStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBC1D18E66F00E960A6 /* HYRetweetedStatusFrame.swift */; };
+		8E27A29C1D195112008388F0 /* HYRetweetedStatusFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBC1D18E66F00E960A6 /* HYRetweetedStatusFrame.swift */; };
+		8E27A29D1D195124008388F0 /* HYOriginalStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB01D18E5C600E960A6 /* HYOriginalStatusView.swift */; };
+		8E27A29E1D195126008388F0 /* HYOriginalStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB01D18E5C600E960A6 /* HYOriginalStatusView.swift */; };
+		8E27A29F1D195128008388F0 /* HYRetweetedStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB21D18E5DA00E960A6 /* HYRetweetedStatusView.swift */; };
+		8E27A2A01D195128008388F0 /* HYRetweetedStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DB21D18E5DA00E960A6 /* HYRetweetedStatusView.swift */; };
+		8E27A2A11D19512B008388F0 /* HYPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBE1D18E98B00E960A6 /* HYPhotosView.swift */; };
+		8E27A2A21D19512C008388F0 /* HYPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E214DBE1D18E98B00E960A6 /* HYPhotosView.swift */; };
+		8E27A2A31D19513F008388F0 /* HYLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B1A51D14FDFE004AC6AD /* HYLoginViewModel.swift */; };
+		8E27A2A41D195140008388F0 /* HYLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18B1A51D14FDFE004AC6AD /* HYLoginViewModel.swift */; };
 		8E66BD1C1D16846F00EA3943 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E66BD1B1D16846F00EA3943 /* libicucore.tbd */; };
 		8E66BD1E1D16847800EA3943 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E66BD1D1D16847800EA3943 /* libz.tbd */; };
 		8E66BD201D16848100EA3943 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E66BD1F1D16848100EA3943 /* libstdc++.tbd */; };
@@ -172,6 +193,8 @@
 		6E72770140DB08048E6B3D54 /* Pods-swift_twoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_twoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift_twoTests/Pods-swift_twoTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AEB6D9B80EEC2B0C653920A /* Pods_swift_twoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_twoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849293A16D6FDC2877C78D5D /* Pods-swift_twoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_twoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift_twoUITests/Pods-swift_twoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E1755A51D199584008781D4 /* NSDate+HYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HYCategory.h"; sourceTree = "<group>"; };
+		8E1755A61D199584008781D4 /* NSDate+HYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HYCategory.m"; sourceTree = "<group>"; };
 		8E18B1A51D14FDFE004AC6AD /* HYLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLoginViewModel.swift; sourceTree = "<group>"; };
 		8E214DB01D18E5C600E960A6 /* HYOriginalStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYOriginalStatusView.swift; sourceTree = "<group>"; };
 		8E214DB21D18E5DA00E960A6 /* HYRetweetedStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYRetweetedStatusView.swift; sourceTree = "<group>"; };
@@ -343,6 +366,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E1755A41D199584008781D4 /* NSDate+HYCategory */ = {
+			isa = PBXGroup;
+			children = (
+				8E1755A51D199584008781D4 /* NSDate+HYCategory.h */,
+				8E1755A61D199584008781D4 /* NSDate+HYCategory.m */,
+			);
+			path = "NSDate+HYCategory";
+			sourceTree = "<group>";
+		};
 		8E75A0741D14510600C97654 = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +459,7 @@
 		8E75A0B01D1457E800C97654 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				8E1755A41D199584008781D4 /* NSDate+HYCategory */,
 				8ECE0B461D1702B200ADC791 /* ShareSDK */,
 			);
 			path = Others;
@@ -988,6 +1021,7 @@
 				8E90B8271D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */,
 				8E75A0DD1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 				8E90B8231D17E70200EFB2BD /* HYStatusContentView.swift in Sources */,
+				8E1755A71D199584008781D4 /* NSDate+HYCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,15 +1029,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E12E5E21D194AB100291760 /* HYOrighinalStatusFrame.swift in Sources */,
 				8E75A0F21D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */,
 				8E75A0DA1D145CEE00C97654 /* Global.swift in Sources */,
 				8E75A0CA1D145CBB00C97654 /* HYHomeVC.swift in Sources */,
 				8E75A0F61D145D3500C97654 /* HYProfileVC.swift in Sources */,
 				8E90B8301D1801CF00EFB2BD /* HYStatuses.swift in Sources */,
+				8E27A2A11D19512B008388F0 /* HYPhotosView.swift in Sources */,
 				8E75A0EA1D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */,
+				8E12E5E01D194AAE00291760 /* HYStatusToolBarFrame.swift in Sources */,
+				8E27A29D1D195124008388F0 /* HYOriginalStatusView.swift in Sources */,
 				8E75A0E21D145D0900C97654 /* HYVistorView.swift in Sources */,
 				8E75A0C61D145CAF00C97654 /* HYAccountTool.swift in Sources */,
+				8E12E5DE1D194AAA00291760 /* HYStatusContentFrame.swift in Sources */,
 				8E75A0D21D145CD300C97654 /* HYNavigationViewController.swift in Sources */,
+				8E27A2A31D19513F008388F0 /* HYLoginViewModel.swift in Sources */,
 				8E75A0EE1D145D2300C97654 /* HYOAuthViewController.swift in Sources */,
 				8E75A0C21D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
 				8E75A0E61D145D1100C97654 /* HYMessageVC.swift in Sources */,
@@ -1016,9 +1056,13 @@
 				8E75A0FA1D145F6200C97654 /* HYAccountViewModel.swift in Sources */,
 				8E90B8381D1804E600EFB2BD /* HYPhoto.swift in Sources */,
 				8E75A0D61D145CE000C97654 /* HYTabBar.swift in Sources */,
+				8E12E5DC1D194AA600291760 /* HYStatusesFrame.swift in Sources */,
 				8E90B8201D17E1DE00EFB2BD /* HYHomeTableCell.swift in Sources */,
 				8E75A0DE1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 				8E90B8281D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */,
+				8E27A29B1D195111008388F0 /* HYRetweetedStatusFrame.swift in Sources */,
+				8E27A29F1D195128008388F0 /* HYRetweetedStatusView.swift in Sources */,
+				8E1755A81D199584008781D4 /* NSDate+HYCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,15 +1070,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E27A29A1D19510F008388F0 /* HYOrighinalStatusFrame.swift in Sources */,
 				8E75A0F31D145D2F00C97654 /* HYAccessTokenModel.swift in Sources */,
 				8E75A0DB1D145CEE00C97654 /* Global.swift in Sources */,
 				8E75A0CB1D145CBB00C97654 /* HYHomeVC.swift in Sources */,
 				8E75A0F71D145D3500C97654 /* HYProfileVC.swift in Sources */,
 				8E90B8311D1801CF00EFB2BD /* HYStatuses.swift in Sources */,
+				8E27A2A21D19512C008388F0 /* HYPhotosView.swift in Sources */,
 				8E75A0EB1D145D1700C97654 /* HYNewFeatureViewController.swift in Sources */,
+				8E12E5E11D194AAE00291760 /* HYStatusToolBarFrame.swift in Sources */,
+				8E27A29E1D195126008388F0 /* HYOriginalStatusView.swift in Sources */,
 				8E75A0E31D145D0900C97654 /* HYVistorView.swift in Sources */,
 				8E75A0C71D145CAF00C97654 /* HYAccountTool.swift in Sources */,
+				8E12E5DF1D194AAA00291760 /* HYStatusContentFrame.swift in Sources */,
 				8E75A0D31D145CD300C97654 /* HYNavigationViewController.swift in Sources */,
+				8E27A2A41D195140008388F0 /* HYLoginViewModel.swift in Sources */,
 				8E75A0EF1D145D2300C97654 /* HYOAuthViewController.swift in Sources */,
 				8E75A0C31D145C9E00C97654 /* HYDiscoverVC.swift in Sources */,
 				8E75A0E71D145D1100C97654 /* HYMessageVC.swift in Sources */,
@@ -1047,9 +1097,13 @@
 				8E75A0FB1D145F6200C97654 /* HYAccountViewModel.swift in Sources */,
 				8E90B8391D1804E600EFB2BD /* HYPhoto.swift in Sources */,
 				8E75A0D71D145CE000C97654 /* HYTabBar.swift in Sources */,
+				8E12E5DD1D194AA700291760 /* HYStatusesFrame.swift in Sources */,
 				8E90B8211D17E1DE00EFB2BD /* HYHomeTableCell.swift in Sources */,
 				8E75A0DF1D145CFC00C97654 /* HYBaseTableViewController.swift in Sources */,
 				8E90B8291D17E71B00EFB2BD /* HYStatusToolBarView.swift in Sources */,
+				8E27A29C1D195112008388F0 /* HYRetweetedStatusFrame.swift in Sources */,
+				8E27A2A01D195128008388F0 /* HYRetweetedStatusView.swift in Sources */,
+				8E1755A91D199584008781D4 /* NSDate+HYCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1282,6 +1336,7 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "ocean.swift-twoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift_two.app/swift_two";
@@ -1309,6 +1364,7 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "ocean.swift-twoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift_two.app/swift_two";
@@ -1335,6 +1391,7 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "ocean.swift-twoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = swift_two;
@@ -1362,6 +1419,7 @@
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/swift_two/Classes/Others/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "ocean.swift-twoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = swift_two;

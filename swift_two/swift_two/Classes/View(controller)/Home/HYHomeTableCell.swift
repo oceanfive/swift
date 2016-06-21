@@ -18,19 +18,19 @@ class HYHomeTableCell: UITableViewCell {
     
         willSet(newValue){
         
-            statusContentView.frame = newValue.contentFrame!
+//            self.frame = newValue.frame!
+            
+            statusContentView.contentViewFrame = newValue.contentFrame!
             
             toolBarView.frame = newValue.toolBarFrame!
-            
-            
-            setNeedsLayout()
+ 
+//            setNeedsLayout()
             
         }
-        
-    
+
     }
     
-    class func homeTableCell(tableView: UITableView) -> UITableViewCell {
+    class func homeTableCell(tableView: UITableView) -> HYHomeTableCell {
     
         //MARK: - 这里在oc中可以不需要进行类型转换，但是在swift中需要进行类型转换，即父类向子类进行类型转换
         var cell = tableView.dequeueReusableCellWithIdentifier(kHomeTableCellIdentifier) as? HYHomeTableCell
@@ -52,21 +52,10 @@ class HYHomeTableCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         addSubview(statusContentView)
-        statusContentView.backgroundColor = UIColor.orangeColor()
+//        statusContentView.backgroundColor = UIColor.orangeColor()
         
         addSubview(toolBarView)
         toolBarView.backgroundColor = UIColor.greenColor()
-        
-        
-        
-        
-//        if self == super.init(style: style, reuseIdentifier: reuseIdentifier) {
-//        
-//        
-//        }
-//
-//        
-//        return self
         
         
     }

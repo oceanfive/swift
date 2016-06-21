@@ -8,9 +8,10 @@
 
 import UIKit
 
+
 class HYStatuses: NSObject {
     
-    //微博创建时间
+    //微博创建时间 -- Optional("Tue Jun 21 23:34:28 +0800 2016")
     var created_at: String?
     
     //字符串型的微博ID
@@ -19,8 +20,29 @@ class HYStatuses: NSObject {
     //微博信息内容
     var text: String?
     
-    //微博来源
+    //微博来源 -- Optional("<a href=\"http://app.weibo.com/t/feed/6vtZb0\" rel=\"nofollow\">微博 weibo.com</a>")
     var source: String?
+//        {
+//    
+//        set(newValue) {
+//        
+//            let sourceString = newValue
+//            
+//            let rangeBegin = sourceString.rangeOfString(">")
+//            
+//            let rangeEnd = sourceString.rangeOfString("</")
+////MARK: - oc和swiftrange初始化对比
+////            let range = NSMakeRange(rangeBegin?.startIndex as Int , (rangeEnd?.startIndex - rangeBegin?.startIndex) as Int)
+////            let range = Range.init(start: rangeBegin?.startIndex, end: rangeEnd?.startIndex)
+//            let range = Range(start: rangeBegin?.startIndex as! Int, end: rangeEnd?.startIndex as! Int)
+//            
+//            self.source = sourceString.su
+//            
+//        }
+//    
+//    }
+    
+    
 //MARK: - 记住！所有的存储属性都是要给定初始值的，对于类的话初始值就是在这个类之后加上一个问号
     //微博作者的用户信息字段 详细
     var user: HYUser?

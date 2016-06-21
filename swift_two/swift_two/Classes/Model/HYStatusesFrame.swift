@@ -10,34 +10,37 @@ import UIKit
 
 class HYStatusesFrame: NSObject {
 
+    var contentFrame: HYStatusContentFrame?
+    var toolBarFrame: CGRect?
+//    var frame: CGRect?
+    var cellHeight: CGFloat?
+    
     var status = HYStatuses(){
     
         willSet(newValue){
         
             let tempStatus = newValue
             
-            let contentViewFrame = HYStatusContentFrame()
+            contentFrame = HYStatusContentFrame()
             
-            contentViewFrame.status = tempStatus
+            contentFrame!.status = tempStatus
             
-            contentFrame = contentViewFrame.frame
+            toolBarFrame = CGRectMake(0, CGRectGetMaxY((contentFrame?.frame!)!) + 10.0, kScreenW, 50)
             
-            toolBarFrame = CGRectMake(0, CGRectGetMaxY(contentFrame!) + 10.0, kScreenW, 50)
+//            frame = CGRectMake(0, 0, <#T##width: CGFloat##CGFloat#>, <#T##height: CGFloat##CGFloat#>)
             
             cellHeight = CGRectGetMaxY(toolBarFrame!) + 10.0
             
         
         }
         
-        didSet(oldValue){
-        
-        
-        }
+//        didSet(oldValue){
+//        
+//        
+//        }
 
     }
     
-    var contentFrame: CGRect?
-    var toolBarFrame: CGRect?
-    var cellHeight: CGFloat?
+
 
 }

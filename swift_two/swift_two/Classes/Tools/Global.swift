@@ -32,6 +32,25 @@ let grant_type = "authorization_code"
 let kHome_timelineString = "https://api.weibo.com/2/statuses/home_timeline.json"
 
 
+//MARK: - 微博cell相关属性设置
+//原创微博nameLabel
+let kHomeCellNameLableFont = UIFont.systemFontOfSize(14.0)
+let kHomeCellNameLableColorVip = UIColor.orangeColor()
+let kHomeCellNameLableColorNormal = UIColor.blackColor()
+//原创微博timeLable
+let kHomeCellTimeLableFont = UIFont.systemFontOfSize(11.0)
+let kHomeCellTimeLableColor = UIColor.orangeColor()
+//原创微博sourceLabel
+let kHomeCellSourceLabelFont = UIFont.systemFontOfSize(11.0)
+let kHomeCellSourceLabelColor = UIColor.blackColor()
+//原创微博text
+let kHomeCellTextLabelFont = UIFont.systemFontOfSize(14.0)
+let kHomeCellTextLabelColor = UIColor.blackColor()
+//转发微博text
+let kHomeCellRetweetedTextLabelFont = UIFont.systemFontOfSize(12.0)
+let kHomeCellRetweetedTextLabelColor = UIColor.blackColor()
+
+
 //MARK: - tabBar属性
 let kTabBarTtitleFont = UIFont.systemFontOfSize(12.0)
 let kTabBarTintColor = UIColor.orangeColor()

@@ -21,7 +21,7 @@ class HYLoginViewModel: NSObject {
     
     
     class func login(username: String, password: String) ->LoginResult {
-    
+        
         //MARK: - 发送网络请求，用户输入的用户名和密码和服务器的保存的进行判断
         //MARK: - 假定用户名称为： one  用户密码为： 123456
     

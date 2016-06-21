@@ -10,16 +10,40 @@ import UIKit
 
 class HYStatusContentView: UIView {
 
-
-
+    let originalView = HYOriginalStatusView()
+    //    let retweetedView = HYRetweetedStatusView()
 
     
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    var contentViewFrame = HYStatusContentFrame(){
+    
+        
+        willSet(newValue){
+            
+            self.frame = newValue.frame!
+        
+            originalView.originalStatusFrame = newValue.originalStatusFrame!
+            
+            
+//            setNeedsLayout()
+            
+        }
+        
+    
     }
-    */
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        addSubview(originalView)
+    }
 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
+    
+    
+    
 }

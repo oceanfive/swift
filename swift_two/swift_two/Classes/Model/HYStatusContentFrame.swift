@@ -10,19 +10,24 @@ import UIKit
 
 class HYStatusContentFrame: NSObject {
     
+    var originalStatusFrame: HYOrighinalStatusFrame?
+    
+    var frame: CGRect?
+    
     var status = HYStatuses(){
     
         willSet(newValue){
         
-            let originalFrame = HYOrighinalStatusFrame()
+            originalStatusFrame = HYOrighinalStatusFrame()
             
-            originalFrame.status = newValue
+            originalStatusFrame!.status = newValue
+            
             
 //            let retweetedFrame = HYRetweetedStatusFrame()
 //            
 //            retweetedFrame.status = newValue
    
-            frame = CGRectMake(0, 0, kScreenW, CGRectGetMaxY(originalFrame.frame!) + 10.0 )
+            frame = CGRectMake(0, 10, kScreenW, CGRectGetMaxY((originalStatusFrame?.frame)!) + 10 )
         
         
         }
@@ -34,7 +39,7 @@ class HYStatusContentFrame: NSObject {
     
     }
     
-    var frame: CGRect?
+
     
 
 }
