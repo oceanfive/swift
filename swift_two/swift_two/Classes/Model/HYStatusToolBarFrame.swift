@@ -1,5 +1,5 @@
 //
-//  HYStatusFrame.swift
+//  HYStatusToolBarFrame.swift
 //  swift_two
 //
 //  Created by ocean on 16/6/21.
@@ -8,6 +8,8 @@
 
 import UIKit
 
-class HYStatusFrame: NSObject {
+class HYStatusToolBarFrame: NSObject {
 
+    
+    
 }

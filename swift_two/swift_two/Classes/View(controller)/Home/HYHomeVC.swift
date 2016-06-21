@@ -8,39 +8,66 @@
 
 import UIKit
 
-
 class HYHomeVC: HYBaseTableViewController {
-
-    var dataArray: [HYStatuses] = []
+//MARK: - 实例化数组 --- 两种方法！！
+    var dataArray = [HYStatuses]()
+    
+//    lazy var dataArray: NSMutableArray = {
+//    
+//        var tempArray = NSMutableArray()
+//        
+//        return tempArray
+//        
+//    }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+//MARK: - 第三方发送网络请求
+
+//MARK: - 封装的网络请求函数
         HYStausInfoViewModel.getStatusesInfo({ (data: NSData?, response: NSURLResponse?) -> () in
             print("成功")
+            
             
             let tempDataArr = try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.init(rawValue: 0))
             
             let modelArray = HYStatuses.mj_objectArrayWithKeyValuesArray(tempDataArr!["statuses"])
             
-//            print(modelArray)
+            let temp = modelArray as! [HYStatuses]
+            
+            self.dataArray += temp
+
+            
 //MARK: -  Reference to property 'dataArray' in closure requires explicit 'self.' to make capture semantics explicit 在闭包内访问属性，需要添加self
-            self.dataArray = modelArray as! [HYStatuses]
- 
-            print(self.dataArray)
+//MARK: - 实例化数组方法一！
+//            self.dataArray.appendContentsOf(modelArray as! [HYStatuses])
+//MARK: - 实例化数组方法二
+//            self.dataArray.addObjectsFromArray(modelArray as [AnyObject])
+            
+//MARK: - 千万不要忘记刷新tableView，否则无法显示！！！！!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            self.tableView.reloadData()
+
             
             }) { (error: NSError?) -> () in
                 
                 print("失败")
                 
         }
+        
      
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    
+//    func statusFrameArrayWithStatusArray(statusArray: [HYStatuses]) -> [HYStatusesFrame]{
+//    
+//
+//    
+//    
+//    }
 
     // MARK: - Table view data source
 
@@ -51,71 +78,26 @@ class HYHomeVC: HYBaseTableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return dataArray.count
+        return self.dataArray.count
     }
 
  
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let identifier: String = "cell"
+        let cell = HYHomeTableCell.homeTableCell(tableView)
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(identifier)
-
-        if cell == nil {
+//        cell.detailTextLabel?.text = "963963"
         
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: identifier)
-        }
-        
-        cell!.textLabel?.text = "hahahhaha"
-        cell!.detailTextLabel?.text = "hehhehehhe"
-
-        return cell!
+        return cell
+      
     }
   
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return 200.0
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
