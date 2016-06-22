@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HYHomeTableCell: UITableViewCell {
+class HYHomeTableCell: UITableViewCell, HYStatusToolBarViewDelegate {
 
     //MARK: - 这里注意不要和父类有相同的属性名称，否则会冲突
     let statusContentView = HYStatusContentView()
@@ -24,6 +24,8 @@ class HYHomeTableCell: UITableViewCell {
             
             toolBarView.frame = newValue.toolBarFrame!
  
+            toolBarView.status = newValue.status
+            
 //            setNeedsLayout()
             
         }
@@ -52,28 +54,28 @@ class HYHomeTableCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         addSubview(statusContentView)
-//        statusContentView.backgroundColor = UIColor.orangeColor()
-        
+
         addSubview(toolBarView)
-        toolBarView.backgroundColor = UIColor.greenColor()
-        
-        
+        toolBarView.delegate = self
+       
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func statusToolBarRepostsButtonDidClick() {
+        
+        print("点击转发按钮")
+        
+    }
     
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        
-////        statusContentView.frame = CGRectMake(0, 0, kScreenW, 100)
-////        
-////        toolBarView.frame = CGRectMake(0, CGRectGetMaxY(statusContentView.frame) + 10.0, kScreenW, 50)
-//    
-//        
-//    }
-
+    func statusToolBarCommentsButtonDidClick() {
+        print("点击转发按钮")
+    }
+    
+    func statusToolBarAttitudesButtonDidClick() {
+         print("点击转发按钮")
+    }
 
 }

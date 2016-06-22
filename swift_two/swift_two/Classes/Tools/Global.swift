@@ -52,6 +52,9 @@ let kHomeCellRetweetedNameLabelColor = UIColor.blueColor()
 //转发微博text
 let kHomeCellRetweetedTextLabelFont = UIFont.systemFontOfSize(12.0)
 let kHomeCellRetweetedTextLabelColor = UIColor.blackColor()
+//toolbar
+let kHomeCellToolBarFont = UIFont.systemFontOfSize(12.0)
+let kHomeCellToolBarColor = UIColor.blackColor()
 
 
 //MARK: - tabBar属性

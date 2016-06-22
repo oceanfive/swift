@@ -25,9 +25,7 @@ class HYStatusesFrame: NSObject {
             
             contentFrame!.status = tempStatus
             
-            toolBarFrame = CGRectMake(0, CGRectGetMaxY((contentFrame?.frame!)!) + 10.0, kScreenW, 50)
-            
-//            frame = CGRectMake(0, 0, <#T##width: CGFloat##CGFloat#>, <#T##height: CGFloat##CGFloat#>)
+            toolBarFrame = CGRectMake(0, CGRectGetMaxY((contentFrame?.frame!)!) + 10.0, kScreenW, 30)
             
             cellHeight = CGRectGetMaxY(toolBarFrame!) + 10.0
             
