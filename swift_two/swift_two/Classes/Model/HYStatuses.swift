@@ -23,7 +23,7 @@ class HYStatuses: NSObject {
     //微博来源 -- Optional("<a href=\"http://app.weibo.com/t/feed/6vtZb0\" rel=\"nofollow\">微博 weibo.com</a>")
     var source: String?
 //        {
-//    
+//
 //        set(newValue) {
 //        
 //            let sourceString = newValue
@@ -64,11 +64,11 @@ class HYStatuses: NSObject {
     var pic_urls: [AnyObject] = []
     
 //MARK: - 告诉这个模型中，哪个属性又是一个模型
-//    override static func mj_objectClassInArray() -> [NSObject : AnyObject]! {
-//        
-//        return ["pic_urls": NSClassFromString("HYPhoto")!]
-//        
-//    }
+    override static func mj_objectClassInArray() -> [NSObject : AnyObject]! {
+        
+        return ["pic_urls": HYPhoto.classForCoder()]
+        
+    }
     
 //    func statusesWithDict(dict: [String : AnyObject]) -> HYStatuses {
 //    

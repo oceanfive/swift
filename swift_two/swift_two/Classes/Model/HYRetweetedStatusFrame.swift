@@ -10,41 +10,55 @@ import UIKit
 
 class HYRetweetedStatusFrame: NSObject {
 
-   var status = HYStatuses() {
+    var nameLabelFrame: CGRect?
+    
+    var textLabelFrame: CGRect?
+    
+    var frame: CGRect?
+    
+    var status = HYStatuses() {
     
         willSet(newValue){
         
             let tempStatus = newValue
             
+            //nameLabelFrame
+            let tempNameText = "@\((tempStatus.retweeted_status?.user?.name)!)" as NSString
+            
+            let nameLabelSize = tempNameText.boundingRectWithSize(CGSizeMake(kScreenW, CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:kHomeCellRetweetedNameLabelFont], context: nil).size
+            
+            let nameLabelX: CGFloat = 10.0
+            let nameLabelY: CGFloat = 10.0
+            let nameLabelW: CGFloat = nameLabelSize.width
+            let nameLabelH: CGFloat = nameLabelSize.height
+            
+            nameLabelFrame = CGRectMake(nameLabelX, nameLabelY, nameLabelW, nameLabelH)
+            
             //textFrame
             let tempString = (tempStatus.retweeted_status?.text)! as NSString
             
-            let tempSize = CGSizeMake(kScreenW - 10.0, CGFloat.max)
+            let size = tempString.boundingRectWithSize(CGSizeMake(kScreenW - 20.0, CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: kHomeCellRetweetedTextLabelFont], context: nil).size
             
-            let size = tempString.boundingRectWithSize(tempSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFontOfSize(15.0), NSForegroundColorAttributeName: UIColor.blackColor()], context: nil)
-            
-            let textLabelX: CGFloat = 10.0
-            let textLabelY: CGFloat = 10.0
+            let textLabelX: CGFloat = nameLabelX
+            let textLabelY: CGFloat = CGRectGetMaxY(nameLabelFrame!) + 10.0
             let textLabelW: CGFloat = size.width
             let textLabelH: CGFloat = size.height
             
             textLabelFrame = CGRectMake(textLabelX, textLabelY, textLabelW, textLabelH)
-//MARK: - 待确定？？！！
-            frame = CGRectMake(0, CGRectGetMaxY(HYOrighinalStatusFrame().frame!), kScreenW, CGRectGetMaxY(textLabelFrame!) + 10.0)
+//MARK: - 待确定？？！！这里先设置为0，通过父控件来修改尺寸
+            frame = CGRectMake(0, 0, kScreenW, CGRectGetMaxY(textLabelFrame!) + 10.0)
         
         }
         
-        didSet(oldValue){
-            
-        
-        }
-    
+//        didSet(oldValue){
+//            
+//        
+//        }
+//    
     
     }
     
     
-    var textLabelFrame: CGRect?
-    
-    var frame: CGRect?
+
     
 }

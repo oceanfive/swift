@@ -46,6 +46,9 @@ let kHomeCellSourceLabelColor = UIColor.blackColor()
 //原创微博text
 let kHomeCellTextLabelFont = UIFont.systemFontOfSize(14.0)
 let kHomeCellTextLabelColor = UIColor.blackColor()
+//转发微博name
+let kHomeCellRetweetedNameLabelFont = UIFont.systemFontOfSize(12.0)
+let kHomeCellRetweetedNameLabelColor = UIColor.blueColor()
 //转发微博text
 let kHomeCellRetweetedTextLabelFont = UIFont.systemFontOfSize(12.0)
 let kHomeCellRetweetedTextLabelColor = UIColor.blackColor()
