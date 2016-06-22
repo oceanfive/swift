@@ -61,7 +61,7 @@ class HYOrighinalStatusFrame: NSObject {
             vipImageViewFrame = CGRectMake(vipImageViewX, vipImageViewY, vipImageViewW, vipImageViewH)
             
             
-            //timeLabel 
+            //timeLabel
             let timeLabelText = tempStatus.created_at! as NSString
             let timeLabelSize = timeLabelText.boundingRectWithSize(CGSizeMake(kScreenW, CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: kHomeCellTimeLableFont], context: nil).size
             let timeLabelX: CGFloat = nameLabelX
@@ -73,6 +73,7 @@ class HYOrighinalStatusFrame: NSObject {
             
             // sourceLabel 
             let sourceLabelText = tempStatus.source! as NSString
+//            print("tempStatus.source--\(tempStatus.source)")
             let sourceLabelSize = sourceLabelText.boundingRectWithSize(CGSizeMake(kScreenW, CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: kHomeCellSourceLabelFont], context: nil).size
             let sourceLabelX: CGFloat = CGRectGetMaxX(timeLabelFrame!) + 10
             let sourceLabelY: CGFloat = timeLabelY

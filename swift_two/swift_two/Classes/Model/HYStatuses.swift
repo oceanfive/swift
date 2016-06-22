@@ -11,17 +11,146 @@ import UIKit
 
 class HYStatuses: NSObject {
     
-    //微博创建时间 -- Optional("Tue Jun 21 23:34:28 +0800 2016")
-    var created_at: String?
-    
     //字符串型的微博ID
     var idstr: String?
     
     //微博信息内容
     var text: String?
+
+    //微博创建时间 -- Optional("Tue Jun 21 23:34:28 +0800 2016")
+    var created_at: String?{
+    
+        didSet(oldValue){
+        
+            //获取这条微博的日期
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "EEE MMM dd HH:mm:ss z yyyy"
+            let tempDate = dateFormatter.dateFromString(created_at!)
+            
+            //获取当前日期
+            let currentDate = NSDate()
+            
+//            print(currentDate.distanceDate(tempDate!))
+//            print("tempDate--\(tempDate!)")
+//            print("currentDate--\(currentDate)")
+            if ((tempDate?.isThisYear()) != nil) { //今年
+            
+                if ((tempDate?.isToday()) != nil) { // 今天
+                   let timeInterval = currentDate.distanceDate(tempDate!)
+                   
+                    if timeInterval <= 60 { // 一分钟内   刚刚
+                        
+                        created_at = "刚刚"
+                        
+                    }else if timeInterval > 60 && timeInterval <= 60 * 60 { // 一个小时内   6分钟前
+//MARK: - 格式化字符串， oc 和 swift相同，都需要使用 format,行不通？？？
+                       let second = timeInterval / 60
+                        
+                       created_at = "\(Int(second))分钟前"
+                        
+                    }else { // 超过一个小时   2小时前
+                    
+                        let hour = timeInterval / (60 * 60)
+                        created_at = "\(Int(hour))小时前"
+
+                    }
+   
+                }else if ((tempDate?.isYesterday()) != nil){ // 昨天   昨天 20:12
+                    
+                    let calendar = NSCalendar.currentCalendar()
+                    
+//                    let unit = [.Minute, .Hour]
+//MARK: - 这里注意oc和siwft日期分离元素的区别  oc |  -- 多项选择  swift 结构体
+                    let componets = calendar.components([.Hour , .Minute], fromDate: tempDate!)
+                    
+                    created_at = "昨天 \(componets.hour):\(componets.minute)"
+ 
+                }else { //  06-20
+                
+                    let calendar = NSCalendar.currentCalendar()
+                    
+                    let componets = calendar.components([.Month, .Day], fromDate: tempDate!)
+                    
+                    created_at = "\(componets.month)-\(componets.day)"
+
+                }
+            
+            }else {//不是今年 2015-09-20
+            
+                let calendar = NSCalendar.currentCalendar()
+                
+                let componets = calendar.components([.Year, .Month, .Day], fromDate: tempDate!)
+                
+                created_at = "\(componets.year)-\(componets.month)-\(componets.day)"
+  
+            
+            }
+ 
+        }
+        
+    }
     
     //微博来源 -- Optional("<a href=\"http://app.weibo.com/t/feed/6vtZb0\" rel=\"nofollow\">微博 weibo.com</a>")
-    var source: String?
+    var source: String?{
+//MARK: - 如果需要修改属性的值，需要在didSet方法中进行修改
+//        willSet(newValue){
+////            print("newValue---\(newValue)")
+////MARK: - 这里有时候来源为空，需要进行判断， 判断条件为 "" 不是 nil
+//            if newValue != "" {
+//            
+//                let sourceString = newValue as NSString
+////MARK: - 这里swift设置失败，转为oc尝试！
+//                let rangeBegin = sourceString.rangeOfString(">")
+//                
+//                let rangeEnd = sourceString.rangeOfString("</")
+//                
+////                print(rangeBegin)
+////                
+////                print(rangeEnd)
+//                //MARK: - oc和swiftrange初始化对比
+//                //            let range = NSMakeRange(rangeBegin?.startIndex as Int , (rangeEnd?.startIndex - rangeBegin?.startIndex) as Int)
+//                //            let range = Range.init(start: rangeBegin?.startIndex, end: rangeEnd?.startIndex)
+//                let range = NSMakeRange(rangeBegin.location + 1, rangeEnd.location - rangeBegin.location - 1)
+////MARK: - Attempting to store to property 'source' within its own willSet, which is about to be overwritten by the new value
+//                self.source = sourceString.substringWithRange(range)
+//   
+////                print("self.source---\(self.source)")
+////                print("source--\(source)")
+//            }
+//        }
+        
+        didSet(oldValue){
+        
+            if source != "" {
+                
+                let sourceString = source! as NSString
+                //MARK: - 这里swift设置失败，转为oc尝试！
+                let rangeBegin = sourceString.rangeOfString(">")
+                
+                let rangeEnd = sourceString.rangeOfString("</")
+                
+                //                print(rangeBegin)
+                //
+                //                print(rangeEnd)
+                //MARK: - oc和swiftrange初始化对比
+                //            let range = NSMakeRange(rangeBegin?.startIndex as Int , (rangeEnd?.startIndex - rangeBegin?.startIndex) as Int)
+                //            let range = Range.init(start: rangeBegin?.startIndex, end: rangeEnd?.startIndex)
+                let range = NSMakeRange(rangeBegin.location + 1, rangeEnd.location - rangeBegin.location - 1)
+                //MARK: - Attempting to store to property 'source' within its own willSet, which is about to be overwritten by the new value
+                self.source = sourceString.substringWithRange(range)
+                
+                //                print("self.source---\(self.source)")
+                //                print("source--\(source)")
+            }
+
+            
+//            print(source)
+//            print("oldValue---\(oldValue)")
+        
+        }
+        
+    }
+//MARK: - 这里会崩溃，存储属性使用了get，set，xcode崩溃
 //        {
 //
 //        set(newValue) {

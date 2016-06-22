@@ -48,7 +48,7 @@ class HYOriginalStatusView: UIView {
 //            print("created_at---\(status.created_at)")
             //sourceLabel
             sourceLabel.frame = newValue.sourceLabelFrame!
-            sourceLabel.text = status.source
+            sourceLabel.text = status.source!
 //            print("created_at---\(status.source)")
             //textLabel
             textLabel.frame = newValue.textLabelFrame!
